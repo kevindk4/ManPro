@@ -1,1 +1,3 @@
-//bla bla bla
+class C_ModulPendidikan{	
+    //test	
+}
