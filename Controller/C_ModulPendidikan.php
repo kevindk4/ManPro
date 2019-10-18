@@ -1,1 +1,3 @@
-//trait_exists
+class C_ModulPendidikan{	
+    //test	
+}
