@@ -4,7 +4,7 @@
 1. cek versi php dan cek windowsnya berapa bit <br>
 ![image](https://user-images.githubusercontent.com/44316758/67177368-7876c780-f3f8-11e9-8ba9-141191b2e2a6.png) <br>
 Cara Mengecheck -> buat file php baru, simpan di xampp -> htdocs. Berisi 
-<pre><?php echo phpinfo();?></pre> <br>
+<code>'<?php echo phpinfo();?>'</code> <br>
 2. buka file SQLSRV_Readme <br>
 ![image](https://user-images.githubusercontent.com/44316758/67177420-9fcd9480-f3f8-11e9-9105-81cedee45c47.png) <br>
 3. pilih driver file dan pilih yang thread safe <br>
