@@ -42,11 +42,4 @@ class DB{
 		return $result;
 	}
 }
-
-//caranya
-$db = new DB();
-$test->openConnection();
-$query = "EXEC Table3b1_RekognisiDTPS";
-$hasil = $test->executeStoredProcedure($query,[]);
-print_r($hasil);
 ?>
