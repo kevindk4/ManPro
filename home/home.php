@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="../style/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -50,10 +50,10 @@
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 			</div>
 			<div class="w3-cell w3-cell-middle w3-padding">
-        		<img src="image/Logo-UNPAR.png" height="100px" width="100px">
+        		<img src="../image/Logo-UNPAR.png" height="100px" width="100px">
             </div>
             <div class="w3-cell w3-cell-middle w3-padding">
-                <img src="image/logo_if.png" height="100px" width="400px">
+                <img src="../image/logo_if.png" height="100px" width="400px">
             </div>
             <div class="w3-cell w3-cell-middle w3-padding">
                 <p>Program Studi Informatika</p>
@@ -65,5 +65,5 @@
 			<p><i class="fa fa-copyright"> Copyright by Manpro Kelompok Besar 2019</i></p>
 		</div>
 	</body>
-	<script type="text/javascript" src="script/script.js"></script>
+	<script type="text/javascript" src="../script/script.js"></script>
 </html>
