@@ -2,39 +2,6 @@ h1, h2, h3, h4, h5, h6, span{
 	font-family: "Lucida Sans Unicode"!important;
 }
 
-.images{
-	position:relative;
-	float:left;
-	width:100%;
-}
-
-.carousel-container{
-	position: relative;
-	margin: auto;
-	border-bottom: solid skyblue;
-	height:300px;
-	overflow:hidden;
-}
-
-.numbertext{
-	font-size: 12px;
-	padding: 8px 12px;
-	position: absolute;
-	top: 0;
-}
-
-.slides{
-	animation-name: slides;
-	animation-duration: 8s;
-}
-
-@keyframes slides{
-	0%{left:100%}
-	40%{left:0}
-	60%{left:0}
-	100%{left:-100%}
-}
-
 /*side navbar*/
 body {
 	font-family: "Lato", sans-serif;
@@ -50,19 +17,20 @@ body {
 	background-color: rgb(95, 204, 247);
 	overflow-x: hidden;
 	transition: 0.5s;
-	padding-top: 60px;
+	padding-top: 10px;
 }
   
 .sidenav a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 20px;
 	color: #818181;
 	display: block;
 	transition: 0.3s;
 }
   
 .sidenav a:hover {
+	background-color: #0000ff;
 	color: #f1f1f1;
 }
   
@@ -87,4 +55,8 @@ body {
 	background-color: rgb(52, 152, 219);
 	color: white;
 	text-align: center;
+}
+#head_slide_navbar{
+	margin-left: 30px;
+	margin-top: 10px;
 }

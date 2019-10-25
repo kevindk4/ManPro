@@ -17,33 +17,35 @@
 	<body>
 		<div class="heading w3-flat-peter-river">
 			<div class="w3-cell w3-cell-middle w3-padding">
-                <div id="mySidenav" class="sidenav">
+                <div id="mySidenav" class="sidenav" >
+                	<div id="head_slide_navbar">
+                		<img src="image/logo_if.png" height="50%" width="50%">
+                	</div>
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="home.html">Home</a>
                     <a href="visidanmisi.html">Visi dan Misi</a>
-					<div class="w3-dropdown-hover">
-	                    <a href="TataPamong,Tata KeloladanKerja.html">
-	                    	Tata Pamong, Tata Kelola dan Kerja <i class="fa fa-caret-down"></i>
-	                    </a>
-	                    <div class="w3-dropdown-content w3-bar-block" style="margin-left: 7%;">
-							<a href="kerjasamatridharma(pendidikan).html" class="w3-bar-item w3-button">Kerjasama Tridharma(Pendidikan)</a>
-							<a href="kerjasamatridharma(penelitian).html" class="w3-bar-item w3-button">Kerjasama Tridharma(Penelitian)</a>
-							<a href="kerjasamatridharma(Pengabdian).html" class="w3-bar-item w3-button">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
-	                    </div>
-                  	</div> 
-					<div class="w3-dropdown-hover">
-						<a href="mahasiswa.html">Mahasiswa <i class="fa fa-caret-down"></i></a>
-						<div class="w3-dropdown-content w3-bar-block" style="margin-left: 17%;">
-							<a href="kualitasmahasiswa.html" class="w3-bar-item w3-button" style="width: 300%;">Kualitas Input Mahasiswa</a>
-							<a href="mahasiswaasing.html" class="w3-bar-item w3-button" style="width: 300%;">Mahasiswa Asing</a>
-						</div>
-					</div> 
-                        <a href="sdmahasiswa.html">Sumber Daya Mahasiswa</a>
-                        <a href="keuangansarana.html">Keuangan, Sarana, dan Prasarana</a>
-                        <a href="pendidikan.html">Pendidikan</a>
-                        <a href="penelitian.html">Penelitian</a>
-                        <a href="pkm.html">Pengabdian Kepada Masyarakat</a>
-                        <a href="lurahcapaian.html">Lurah dan Capaian Tridharma</a>
+                    <a class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+                        Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
+                    </a>
+                        <div id="demoAcc" class="w3-hide w3-blue w3-card">
+                            <a href="kerjasamatridharma(pendidikan).html" class="w3-bar-item w3-button">Kerjasama Tridharma(Pendidikan)</a><br>
+                            <a href="kerjasamatridharma(penelitian).html" class="w3-bar-item w3-button">Kerjasama Tridharma(Penelitian)</a><br>
+                            <a href="kerjasamatridharma(Pengabdian).html" class="w3-bar-item w3-button">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
+                        </div>
+
+                        <a class="w3-button w3-block w3-left-align" onclick="myAccFuncc()" style="font-size: 20px;">
+                            Mahasiswa <i class="fa fa-caret-down"></i>
+                        </a>
+                            <div id="demoAccc" class="w3-hide w3-blue w3-card">
+                                <a href="kerjasamatridharma(pendidikan).html" class="w3-bar-item w3-button" style="font-size: 20px;padding-right: 60%;color: white">Kualitas Input Mahasiswa</a><br>
+                                <a href="kerjasamatridharma(penelitian).html" class="w3-bar-item w3-button" style="font-size: 20px;padding-right: 70%;color: white">Mahasiswa Asing</a><br>
+                            </div>                                            
+                    <a href="sdmahasiswa.html">Sumber Daya Mahasiswa</a>
+                    <a href="keuangansarana.html">Keuangan, Sarana, dan Prasarana</a>
+                    <a href="pendidikan.html">Pendidikan</a>
+                    <a href="penelitian.html">Penelitian</a>
+                    <a href="pkm.html">Pengabdian Kepada Masyarakat</a>
+                    <a href="lurahcapaian.html">Lurah dan Capaian Tridharma</a>
                 </div>
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 			</div>
@@ -63,5 +65,5 @@
 			<p><i class="fa fa-copyright"> Copyright by Manpro Kelompok Besar 2019</i></p>
 		</div>
 	</body>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="script/script.js"></script>
 </html>
