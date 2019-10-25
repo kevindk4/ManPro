@@ -61,5 +61,9 @@
                 <p>Universitas Katolik Parahyangan</p>
             </div>
 		</div>
+		<footer>
+			<i class="fa fa-copyright">Copyright by Manpro Kelompok Besar 2019</i>
+		</footer>
 	</body>
+	<script type="text/javascript" src="script.js"></script>
 </html>
