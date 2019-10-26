@@ -24,7 +24,7 @@
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="home.php">Home</a>
                     <a href="visi_misi.php">Visi dan Misi</a>
-                    <a href="" class="w3-block w3-left-align" onclick="myAccFunc()">
+                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc()">
                         Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
                     </a>
                     <div id="demoAcc" class="w3-hide w3-blue w3-card">
@@ -78,7 +78,7 @@
             </ol>
         </div>
         <div class="footer">
-            <p><i class="fa fa-copyright"> Copyright by Manpro Kelompok Besar 2019</i></p>
+            <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
     </body>
     <script type="text/javascript" src="../script/script.js"></script>
