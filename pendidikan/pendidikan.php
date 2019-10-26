@@ -22,15 +22,15 @@
                         <img src="../image/logo_if.png" height="50%" width="50%">
                     </div>
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="home.php">Home</a>
-                    <a href="visi_misi.php">Visi dan Misi</a>
+                    <a href="../home/home.php">Home</a>
+                    <a href="../home/visi_misi.php">Visi dan Misi</a>
                     <a href="" class="w3-block w3-left-align" onclick="myAccFunc()">
                         Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
                     </a>
                     <div id="demoAcc" class="w3-hide w3-blue w3-card">
-                        <a href="ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pendidikan)</a><br>
-                        <a href="ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
-                        <a href="ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
+                        <a href="../home/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pendidikan)</a><br>
+                        <a href="../home/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
+                        <a href="../home/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
                     </div>
 
                     <a  href="#" class="w3-block w3-left-align" onclick="myAccFuncc()">
@@ -42,7 +42,7 @@
                     </div>                                            
                     <a href="../sdm/sd_mahasiswa.php">Sumber Daya Mahasiswa</a>
                     <a href="../sdm/keuangan_sarana_prasarana.php">Keuangan, Sarana, dan Prasarana</a>
-                    <a href="../pendidikan/pendidikan.php">Pendidikan</a>
+                    <a href="pendidikan.php">Pendidikan</a>
                     <a href="../sdm/penelitian.php">Penelitian</a>
                     <a href="../sdm/pkm.php">Pengabdian Kepada Masyarakat</a>
                     <a href="../luaran-capaian/luaran_capaian.php">Lurah dan Capaian Tridharma</a>
