@@ -92,7 +92,11 @@
                 <p>Universitas Katolik Parahyangan</p>
             </div>
         </div>
-        <div><!--insert here--></div>
+        <div>
+            <table>
+                <th></th>
+            </table>
+        </div>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
