@@ -92,8 +92,27 @@
                 <p>Universitas Katolik Parahyangan</p>
             </div>
         </div>
-        <div><!--insert here--></div>
-        <div class="footer">
+        <div id="table">
+        <table>
+            <tr>
+                <th>Judul Luaran</th>
+                <th>Tahun</th>
+                <th>Keterangan</th>
+            </tr>
+            <?php
+            require_once '../DBConnection.php';
+            $conn = new DB();
+            $hasil = $conn->executeStoredProcedure("EXEC Tabel8f3_LuaranPenelitianPKMLainnyaMahasiswa", []);
+            foreach ($hasil as $row){
+                echo "<tr>";
+                echo "<td>".$row[0]."</td>";
+                echo "<td>".$row[1]."</td>";
+                echo "<td>".$row[2]."</td>";
+            }
+            ?>
+            </table>
+    </div>
+    <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
     </body>
