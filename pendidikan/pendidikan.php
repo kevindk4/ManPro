@@ -94,7 +94,7 @@
         </div>
         <div>
             <table>
-                <th></th>
+                <tr><th></th></tr>
             </table>
         </div>
         <div class="footer">
