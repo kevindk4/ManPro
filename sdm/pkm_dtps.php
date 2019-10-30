@@ -319,26 +319,8 @@
                 <td>6</td>
                 <td>Seminar nasional</td>
                 <?php
-                $tulisan6 = "Seminar nasional";
-                    if($hasil2[5][0] == $tulisan6)
-                    {
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td>".$hasil2[5][$i]."</td>";
-
-                            if($i == 1){
-                                $jumlah1+= $hasil2[5][$i];
-                            }else if($i == 2){
-                                $jumlah2+= $hasil2[5][$i];
-                            }else if($i == 3){
-                                $jumlah3+= $hasil2[5][$i];
-                            }else{
-                                $jumlah4+= $hasil2[5][$i];
-                            }
-                        }
-                    }else{
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td> - </td>";
-                        }
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
                     }
                 ?>
             </tr>
@@ -346,26 +328,8 @@
                 <td>7</td>
                 <td>Seminar internasional</td>
                 <?php
-                $tulisan7 = "Seminar internasional";
-                    if($hasil2[6][0] == $tulisan7)
-                    {
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td>".$hasil2[6][$i]."</td>";
-
-                            if($i == 1){
-                                $jumlah1+= $hasil2[6][$i];
-                            }else if($i == 2){
-                                $jumlah2+= $hasil2[6][$i];
-                            }else if($i == 3){
-                                $jumlah3+= $hasil2[6][$i];
-                            }else{
-                                $jumlah4+= $hasil2[6][$i];
-                            }
-                        }
-                    }else{
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td> - </td>";
-                        }
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
                     }
                 ?>
             </tr>
@@ -373,26 +337,8 @@
                 <td>8</td>
                 <td>Tulisan di media massa wilayah</td>
                 <?php
-                $tulisan8 = "Seminar internasional";
-                    if($hasil2[7][0] == $tulisan8)
-                    {
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td>".$hasil2[7][$i]."</td>";
-
-                            if($i == 1){
-                                $jumlah1+= $hasil2[7][$i];
-                            }else if($i == 2){
-                                $jumlah2+= $hasil2[7][$i];
-                            }else if($i == 3){
-                                $jumlah3+= $hasil2[7][$i];
-                            }else{
-                                $jumlah4+= $hasil2[7][$i];
-                            }
-                        }
-                    }else{
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td> - </td>";
-                        }
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
                     }
                 ?>
             </tr>
@@ -400,26 +346,8 @@
                 <td>9</td>
                 <td>Tulisan di media massa nasional</td>
                 <?php
-                $tulisan9 = "Seminar internasional";
-                    if($hasil2[8][0] == $tulisan9)
-                    {
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td>".$hasil2[8][$i]."</td>";
-
-                            if($i == 1){
-                                $jumlah1+= $hasil2[8][$i];
-                            }else if($i == 2){
-                                $jumlah2+= $hasil2[8][$i];
-                            }else if($i == 3){
-                                $jumlah3+= $hasil2[8][$i];
-                            }else{
-                                $jumlah4+= $hasil2[8][$i];
-                            }
-                        }
-                    }else{
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td> - </td>";
-                        }
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
                     }
                 ?>
             </tr>
@@ -427,26 +355,8 @@
                 <td>10</td>
                 <td>Tulisan di media massa internasional</td>
                 <?php
-                $tulisan10 = "Seminar internasional";
-                    if($hasil2[9][0] == $tulisan10)
-                    {
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td>".$hasil2[9][$i]."</td>";
-
-                            if($i == 1){
-                                $jumlah1+= $hasil2[9][$i];
-                            }else if($i == 2){
-                                $jumlah2+= $hasil2[9][$i];
-                            }else if($i == 3){
-                                $jumlah3+= $hasil2[9][$i];
-                            }else{
-                                $jumlah4+= $hasil2[9][$i];
-                            }
-                        }
-                    }else{
-                        for ($i=1; $i <= 4; $i++) { 
-                            echo "<td> - </td>";
-                        }
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
                     }
                 ?>
             </tr>
@@ -486,6 +396,35 @@
             <tr>
                 <td>1</td>
                 <td>Publikasi di Jurnal nasional tidak terakreditasi</td>
+                <?php
+                $jumlah1 = 0;
+                $jumlah2 = 0;
+                $jumlah3 = 0;
+                $jumlah4 = 0;
+
+                $tulisan1 = "Jurnal nasional tidak terakreditasi";
+                $hasil2 = $conn->executeStoredProcedure( "EXEC Tabel3b4_PartJurnal", []); 
+                    if($hasil2[0][0] == $tulisan1)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[0][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlah1+= $hasil2[0][$i];
+                            }else if($i == 2){
+                                $jumlah2+= $hasil2[0][$i];
+                            }else if($i == 3){
+                                $jumlah3+= $hasil2[0][$i];
+                            }else{
+                                $jumlah4+= $hasil2[0][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
             </tr>
             <tr>
                 <td>2</td>
