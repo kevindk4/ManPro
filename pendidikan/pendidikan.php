@@ -1,5 +1,5 @@
 <?php
-// require '../DBConnection.php'
+    require '../DBConnection.php'
 ?>
 <!DOCTYPE html>
 <html>
@@ -129,21 +129,22 @@
                 <td>mata kuliah 2</td>
                 <td>integrasi tiga</td>
             </tr>
-            <!-- <?php
-                $conn = new DB();
-                $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM", null);
-                foreach ($result as $key => $value) {
-                    echo "<tr>";
-                    echo "<td>" . $key . "</td";
-                    echo "<td>" . $value['0'] . "</td>";
-                    echo "<td>" . $value['1'] . "</td>";
-                    echo "<td>" . $value['2'] . "</td>";
-                    echo "<td>" . $value['3'] . "</td>";
-                    echo "</tr>";
+            <?php
+                // $conn = new DB();
+                // $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM", []);
+                // foreach ($result as $key =>$value){
+                //     echo "<tr>";
+                //     echo "<td>".$key."</td";
+                //     echo "<td>".$value[0]."</td>";
+                //     echo "<td>" . $value[1]."</td>";
+                //     echo "<td>" . $value[2]."</td>";
+                //     echo "<td>" . $value[3]."</td>";
+                //     echo "</tr>";
                 }
-            ?> -->
+            ?>
         </table>
     </div>
+
     <div class="footer">
         <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
     </div>
