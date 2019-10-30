@@ -92,7 +92,56 @@
                 <p>Universitas Katolik Parahyangan</p>
             </div>
         </div>
-        <div><!--insert here--></div>
+        <div>
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama Dosen</th>
+                    <th>Tema Penelitian sesuai Roadmap</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Judul Kegiatan 1)</th>
+                    <th>Tahun</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                </tr>
+                <?php
+                    require_once '../DBConnection.php';
+                    $conn = new DB();
+                    $hasil = $conn->executeStoredProcedure("EXEC Tabel6a_PenelitianDTPSMahasiswa", []);
+                    foreach ($hasil as $row){
+                        echo "<tr>";
+                        echo "<td>".$row[0]."</td>";
+                        echo "<td>".$row[1]."</td>";
+                        echo "<td>".$row[2]."</td>";
+                        echo "<td>".$row[3]."</td>";
+                        echo "<td>".$row[4]."</td>";
+                        echo "<td>".$row[5]."</td>";
+                        if($row[8]!=""){
+                            echo "<td>".$row[8]."</td>";
+                        }else{
+                            echo "<td>-</td>";
+                        }
+                        echo "<td>".$row[9]."</td>";
+                        echo "<td>".$row[10]."</td>";
+                        echo "<td>".$row[11]."</td>";
+                        echo "</tr>";
+                    }
+                ?>
+                <tr>
+                <td colspan="2">Jumlah</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                </tr>
+            </table>
+        </div>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
