@@ -1,5 +1,5 @@
 <?php
-include '../DBConnection.php'
+// require '../DBConnection.php'
 ?>
 <!DOCTYPE html>
 <html>
@@ -98,7 +98,8 @@ include '../DBConnection.php'
         </div>
     </div>
     <div>
-        <!-- <h2>Integrasi Kegiatan Penelitian dalam Pembelajaran</h2> -->
+        <h2>Integrasi Kegiatan Penelitian dalam Pembelajaran</h2>
+        <br>
         <table>
             <tr>
                 <th>No.</th>
@@ -128,7 +129,7 @@ include '../DBConnection.php'
                 <td>mata kuliah 2</td>
                 <td>integrasi tiga</td>
             </tr>
-            <?php
+            <!-- <?php
                 $conn = new DB();
                 $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM", null);
                 foreach ($result as $key => $value) {
@@ -140,7 +141,7 @@ include '../DBConnection.php'
                     echo "<td>" . $value['3'] . "</td>";
                     echo "</tr>";
                 }
-            ?>
+            ?> -->
         </table>
     </div>
     <div class="footer">
