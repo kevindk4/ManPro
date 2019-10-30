@@ -122,6 +122,65 @@
                     <th>9</th>
                     <th>10</th>
                 </tr>
+                <!-- biaya operasional pendidikan &  kemahasiswaan-->
+                <?php
+                
+                ?>
+                <tr>
+                    <td colspan="2">Jumlah</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+
+                <!-- biaya penelitian & Pkm-->
+                <?php
+                
+                ?>
+                <tr>
+                    <td colspan="2">Jumlah</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+
+                <!-- biaya  investasi SDDM, sarana, Prasarana-->
+                <?php
+                
+                ?>
+                <tr>
+                    <td colspan="2">Jumlah</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>  
+                 <!-- total seluruh biaya-->
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr> 
             </table>
         </div>
         <div class="footer">
