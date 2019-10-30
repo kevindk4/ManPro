@@ -95,6 +95,7 @@
         </div>
     </div>
     <div id="table">
+        <h1>Profil Dosen</h1>
         <table>
             <tr>
                 <th>Nama Dosen</th>
