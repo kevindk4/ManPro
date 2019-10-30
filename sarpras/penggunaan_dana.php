@@ -92,7 +92,38 @@
                 <p>Universitas Katolik Parahyangan</p>
             </div>
         </div>
-        <div><!--insert here--></div>
+        <div>
+            <table>
+                <tr>
+                    <th rowspan="2">No.</th>
+                    <th rowspan="2">Jenis Penggunaan</th>
+                    <th colspan="4">Unit Pengelola Program Studi (Rp.)</th>
+                    <th colspan="4">Program Studi (Rp.)</th>
+                </tr>   
+                <tr>
+                    <th>TS-2</th>
+                    <th>TS-1</th>
+                    <th>TS</th>
+                    <th>Rata-rata</th>
+                    <th>TS-2</th>
+                    <th>TS-1</th>
+                    <th>TS</th>
+                    <th>Rata-rata</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                </tr>
+            </table>
+        </div>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
