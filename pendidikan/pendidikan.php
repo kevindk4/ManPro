@@ -93,10 +93,35 @@
             </div>
         </div>
         <div>
+            <!-- <h2>Integrasi Kegiatan Penelitian dalam Pembelajaran</h2> -->
             <table>
                 <tr>
-                <th></th>
-                <th></th>
+                    <th>No.</th>
+                    <th>Judul Penelitian/PkM</th>
+                    <th>Nama Dosen</th>
+                    <th>Mata Kuliah</th>
+                    <th>Bentuk Integrasi</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>judul satu</td>
+                    <td>dosen1 dosen</td>
+                    <td>mata kuliah1</td>
+                    <td>integrasi</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>judul dua</td>
+                    <td>dosen2 dosen</td>
+                    <td>mata kuliah2</td>
+                    <td>integrasi</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>judul tiga</td>
+                    <td>dosen3 dosen</td>
+                    <td>mata kuliah 2</td>
+                    <td>integrasi tiga</td>
                 </tr>
             </table>
         </div>
