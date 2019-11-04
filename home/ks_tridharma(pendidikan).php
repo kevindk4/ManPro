@@ -93,6 +93,218 @@
             </div>
         </div>
         <div><!--insert here--></div>
+        <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-uyni{background-color:#c0c0c0;color:#000000;border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-nrix{text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-uyni" rowspan="2">No</th>
+    <th class="tg-uyni" rowspan="2">Lembaga<br>Mitra</th>
+    <th class="tg-uyni" colspan="3">Tingkat</th>
+    <th class="tg-uyni" rowspan="2">Judul Kegiatan Kerjasama</th>
+    <th class="tg-uyni" rowspan="2">Manfaat bagi PS yang Diakreditasi</th>
+    <th class="tg-uyni" rowspan="2">Waktu dan Durasi</th>
+    <th class="tg-uyni" rowspan="2">Bukti Kerjasama</th>
+  </tr>
+  <tr>
+    <td class="tg-uyni">Internasional</td>
+    <td class="tg-uyni">Nasional</td>
+    <td class="tg-uyni">Lokal</td>
+  </tr>
+  <tr>
+    <td class="tg-uyni">1</td>
+    <td class="tg-uyni">2</td>
+    <td class="tg-uyni">3</td>
+    <td class="tg-uyni">4</td>
+    <td class="tg-uyni">5</td>
+    <td class="tg-uyni">6</td>
+    <td class="tg-uyni">7</td>
+    <td class="tg-uyni">8</td>
+    <td class="tg-uyni">9</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi" colspan="9">Pendidikan</td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">1</td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">2</td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">3</td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+  </tr>
+  <tr>
+    <td class="tg-9wq8">4</td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+    <td class="tg-9wq8"></td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">5</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1" colspan="9">Penelitian</td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">1</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">2</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">3</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">4</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">5</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="9">Pengabdian Kepada Masyarakat</td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">1</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">2</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">3</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">4</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+  <tr>
+    <td class="tg-nrix">5</td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+    <td class="tg-nrix"></td>
+  </tr>
+</table>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
