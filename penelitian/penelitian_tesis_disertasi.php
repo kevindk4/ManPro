@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Home</title>
+        <title>Penelitian Mahasiswa</title>
 
     </head>
     <body>
@@ -22,15 +22,15 @@
                         <img src="../image/logo_if.png" height="50%" width="50%">
                     </div>
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="home.php">Home</a>
-                    <a href="visi_misi.php">Visi dan Misi</a>
+                    <a href="../home/home.php">Home</a>
+                    <a href="../home/visi_misi.php">Visi dan Misi</a>
                     <a href="#" class="w3-block w3-left-align" onclick="myAccFunc()">
                         Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
                     </a>
                     <div id="demoAcc" class="w3-hide w3-blue w3-card">
-                        <a href="ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
-                        <a href="ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
-                        <a href="ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
+                        <a href="../home/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
+                        <a href="../home/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
+                        <a href="../home/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
                     </div>    
 
                     <a  href="#" class="w3-block w3-left-align" onclick="myAccFuncc()">
@@ -65,8 +65,8 @@
 
                     <a href="#" class="w3-block w3-left-align" onclick="myAccFunc5()">Penelitian <i class="fa fa-caret-down"></i></a>
                     <div class='w3-hide w3-blue w3-card' id='demoAcc5'>
-                        <a href="../penelitian/penelitian_mahasiswa.php" class='w3-bar-item' style="color:white">Penelitian yang Melibatkan Mahasiswa</a>
-                        <a href="../penelitian/penelitian_tesis_disertasi.php" class='w3-bar-item' style="color:white">Penelitian yang Menjadi Rujukan Tema Tesis/Disertasi</a>
+                        <a href="penelitian_mahasiswa.php" class='w3-bar-item' style="color:white">Penelitian yang Melibatkan Mahasiswa</a>
+                        <a href="penelitian/penelitian_tesis_disertasi.php" class='w3-bar-item' style="color:white">Penelitian yang Menjadi Rujukan Tema Tesis/Disertasi</a>
                     </div>
 
                     <a href="#" class="w3-block w3-left-align" onclick="myAccFunc6()">Pengabdian Kepada Masyarakat <i class="fa fa-caret-down"></i></a>
@@ -93,7 +93,34 @@
                 <p>Universitas Katolik Parahyangan</p>
             </div>
         </div>
-        <div><!--insert here--></div>
+        <div>
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama Dosen</th>
+                    <th>Tema Penelitian sesuai Roadmap</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Judul Tesis/Disertasi</th>
+                    <th>Tahun</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                </tr>
+                <?php
+                    //TBA
+                ?>
+                <tr>
+                <td colspan="4">Jumlah</td>
+                <td>x</td>
+                <td>x</td>
+                </tr>
+            </table>
+        </div>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
