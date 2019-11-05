@@ -102,14 +102,6 @@
                     <th> Judul Kegiata</th>
                     <th> Tahun </th>
                 </tr>   
-                <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>4</th>
-                    <th>5</th>
-                    <th>6</th>
-                </tr>
                 <!-- biaya operasional pendidikan &  kemahasiswaan-->
                 <?php
                    require_once '../DBConnection.php';
