@@ -104,12 +104,35 @@
         </tr>
         <!-- Tinggal dilengkapin si filenya -->
         <?php
-
+            require_once '../DBConnection.php';
+            $conn = new DB();
+            $hasil = $conn->executeStoredProcedure("EXEC Tabel3b5_KaryaIlmiahDisitasi", []);
+            $i = 1;
+            $jumlahJudul = 0;
+            $jumlahJumlahSitasi = 0;
+            foreach ($hasil as $row) {
+                echo "<tr>";
+                echo "<td>" . $i . "</td>";
+                $i = $i + 1;
+                echo "<td>" . $row[0] . "</td>";
+                echo "<td>" . $row[1] . "</td>";
+                echo "<td>" . $row[2] . "</td>";
+                $jumlahJudul += 1;
+                $jumlahJumlahSitasi += $row[2];
+                echo "</tr>";
+            }
         ?>
         <tr>
             <td colspan="2">Jumlah</td>
-            <td>x</td>
-            <td>x</td>
+            <?php 
+                echo "<td>" . $jumlahJudul . "</td>";
+                echo "<td>" . $jumlahJumlahSitasi . "</td>";
+            ?>
+        </tr>
+        <tr>
+            <td>
+            <!-- Kalau ga ada ini baris Jumlah ketutup sama footer -->
+            <td>
         </tr>
     </table>
     <div class="footer">

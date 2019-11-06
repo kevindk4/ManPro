@@ -109,61 +109,79 @@
                 <th>3</th>
                 <th>4</th>
             </tr>
-            <tr>
-                <td>I</td>
-                <td>HKI 1):<br>
-                    a) Paten,<br>
-                    b) Paten Sederhana</td>
-            </tr>
-            <!-- Lengkapin isi point I -->
-            <tr>
-                <td colspan="2">jumlah</td>
-                <td>Na = </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>II</td>
-                <td>HKI 1):<br>
-                    a) Hak Cipta,<br>
-                    b) Desain Produk Industri,<br>
-                    c) Perlindungan Varietas Tanaman (Sertifikat<br>
-                    Perlindungan Varietas Tanaman, Sertifikat<br>
-                    Pelepasan Varietas, Sertifikat Pendaftaran<br>
-                    Varietas),<br>
-                    d) Desain Tata Letak Sirkuit Terpadu,<br>
-                    e) dll.)
-                </td>
-            </tr>
-            <!-- Lengkapin isi point II -->
-            <tr>
-                <td colspan="2">jumlah</td>
-                <td>Na = </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>III</td>
-                <td>Teknologi Tepat Guna, Produk (Produk<br>
-                    Terstandarisasi, Produk Tersertifikasi), Karya<br>
-                    Seni, Rekayasa Sosial
-                </td>
-            </tr>
-            <!-- Lengkapin isi point III -->
-            <tr>
-                <td colspan="2">jumlah</td>
-                <td>Na = </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>IV</td>
-                <td>Buku ber-ISBN, Book Chapter
-                </td>
-            </tr>
-            <!-- Lengkapi isi point IV -->
-            <tr>
-                <td colspan="2">jumlah</td>
-                <td>Na = </td>
-                <td></td>
-            </tr>
+            <?php
+            require_once '../DBConnection.php';
+            $conn = new DB();
+            $hasil = $conn->executeStoredProcedure("EXEC Tabel3b7_LuaranPenelitianPKMLainnya", []);
+
+            foreach ($hasil as $row) {
+                echo "<tr>";
+                echo "<td>" . $row[0] . "</td>";
+                echo "<td>" . $row[1] . "</td>";
+                if($row[2] == null){
+                    echo "<td> NULL </td>";
+                }
+                else{
+                    echo "<td>" . $row[2] . "</td>";
+                }
+                if($row[3] == ""){
+                    echo "<td> - </td>";
+                }
+                else{
+                    echo "<td>" . $row[3] . "</td>";
+                }
+                echo "</tr>";
+            }
+        ?>
+        <tr>
+            <td>
+                III
+            </td>
+            <td>
+            Teknologi Tepat Guna, Produk (Produk Terstandarisasi, Produk Tersertifikasi), Karya Seni, Rekayasa Sosial
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                Jumlah
+            </td>
+            <td>
+                x
+            </td>
+            <td>
+                x
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                IV
+            </td>
+            <td>
+            Buku ber-ISBN, Book Chapter
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                Jumlah
+            </td>
+            <td>
+                x
+            </td>
+            <td>
+                x
+            </td>
+        </tr>
         </table><br><br><br><br>
     </div>
     <div class="footer">

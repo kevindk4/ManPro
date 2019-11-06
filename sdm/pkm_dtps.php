@@ -397,10 +397,11 @@
                 <td>1</td>
                 <td>Publikasi di Jurnal nasional tidak terakreditasi</td>
                 <?php
-                $jumlah1 = 0;
-                $jumlah2 = 0;
-                $jumlah3 = 0;
-                $jumlah4 = 0;
+
+                $jumlahts2 = 0;
+                $jumlahts1 = 0;
+                $jumlahts = 0;
+                $jumlahJumlah = 0;
 
                 $tulisan1 = "Jurnal nasional tidak terakreditasi";
                 $hasil2 = $conn->executeStoredProcedure( "EXEC Tabel3b4_PartJurnal", []); 
@@ -410,13 +411,13 @@
                             echo "<td>".$hasil2[0][$i]."</td>";
 
                             if($i == 1){
-                                $jumlah1+= $hasil2[0][$i];
+                                $jumlahts2+= $hasil2[0][$i];
                             }else if($i == 2){
-                                $jumlah2+= $hasil2[0][$i];
+                                $jumlahts1+= $hasil2[0][$i];
                             }else if($i == 3){
-                                $jumlah3+= $hasil2[0][$i];
+                                $jumlahts+= $hasil2[0][$i];
                             }else{
-                                $jumlah4+= $hasil2[0][$i];
+                                $jumlahJumlah+= $hasil2[0][$i];
                             }
                         }
                     }else{
@@ -429,38 +430,137 @@
             <tr>
                 <td>2</td>
                 <td>Publikasi di Jurnal nasional terakreditasi</td>
+                <?php
+                $tulisan2 = "Jurnal nasional terakreditasi";
+                    if($hasil2[1][0] == $tulisan2)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[1][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlahts2+= $hasil2[1][$i];
+                            }else if($i == 2){
+                                $jumlahts1+= $hasil2[1][$i];
+                            }else if($i == 3){
+                                $jumlahts+= $hasil2[1][$i];
+                            }else{
+                                $jumlahJumlah+= $hasil2[1][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
             </tr>
             <tr>
                 <td>3</td>
                 <td>Publikasi di Jurnal internasional</td>
+                <?php
+                $tulisan3 = "Jurnal internasional";
+                    if($hasil2[2][0] == $tulisan3)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[2][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlahts2+= $hasil2[2][$i];
+                            }else if($i == 2){
+                                $jumlahts1+= $hasil2[2][$i];
+                            }else if($i == 3){
+                                $jumlahts+= $hasil2[2][$i];
+                            }else{
+                                $jumlahJumlah+= $hasil2[2][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
             </tr>
             <tr>
                 <td>4</td>
                 <td>Publikasi di Jurnal internasional bereputasi</td>
+                <?php
+                $tulisan4 = "Jurnal internasional bereputasi";
+                    if($hasil2[3][0] == $tulisan4)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[3][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlahts2+= $hasil2[3][$i];
+                            }else if($i == 2){
+                                $jumlahts1+= $hasil2[3][$i];
+                            }else if($i == 3){
+                                $jumlahts+= $hasil2[3][$i];
+                            }else{
+                                $jumlahJumlah+= $hasil2[3][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
             </tr>
             <tr>
                 <td>5</td>
                 <td>Publikasi di Seminar wilayah/lokal/perguruan tinggi</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
             </tr>
             <tr>
                 <td>6</td>
                 <td>Publikasi di Seminar nasional</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
             </tr>
             <tr>
                 <td>7</td>
                 <td>Publikasi di Seminar internasional</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
             </tr>
             <tr>
                 <td>8</td>
                 <td>Pagelaran/pameran/prestasi dalam forum di tingkat wilayah</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
             </tr>
             <tr>
                 <td>9</td>
                 <td>Pagelaran/pameran/prestasi dalam forum di tingkat nasional</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
             </tr>
             <tr>
                 <td>10</td>
                 <td>Pagelaran/pameran/prestasi dalam forum di tingkat internasional</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
             </tr>
             <!-- Tinggal dilengkapin si filenya -->
             <?php
@@ -468,10 +568,12 @@
             ?>
             <tr>
                 <td colspan="2">Jumlah</td>
-                <td>x</td>
-                <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
+                <?php
+                    echo "<td>".$jumlahts2."</td>";
+                    echo "<td>".$jumlahts1."</td>";
+                    echo "<td>".$jumlahts."</td>";
+                    echo "<td>".$jumlahJumlah."</td>";
+                ?>
             </tr>
         </table>
     </div><br><br><br><br>
