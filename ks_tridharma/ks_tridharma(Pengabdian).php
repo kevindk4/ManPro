@@ -22,8 +22,8 @@
                         <img src="../image/logo_if.png" height="50%" width="50%">
                     </div>
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="home.php">Home</a>
-                    <a href="visi_misi.php">Visi dan Misi</a>
+                    <a href="../home/home.php">Home</a>
+                    <a href="../home/visi_misi.php">Visi dan Misi</a>
                     <a href="#" class="w3-block w3-left-align" onclick="myAccFunc()">
                         Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
                     </a>
