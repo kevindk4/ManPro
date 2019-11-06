@@ -108,39 +108,23 @@
                 <th>Mata Kuliah</th>
                 <th>Bentuk Integrasi</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>judul satu</td>
-                <td>dosen1 dosen</td>
-                <td>mata kuliah1</td>
-                <td>integrasi</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>judul dua</td>
-                <td>dosen2 dosen</td>
-                <td>mata kuliah2</td>
-                <td>integrasi</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>judul tiga</td>
-                <td>dosen3 dosen</td>
-                <td>mata kuliah 2</td>
-                <td>integrasi tiga</td>
-            </tr>
             <?php
-                // $conn = new DB();
-                // $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM", []);
-                // foreach ($result as $key =>$value){
-                //     echo "<tr>";
-                //     echo "<td>".$key."</td";
-                //     echo "<td>".$value[0]."</td>";
-                //     echo "<td>" . $value[1]."</td>";
-                //     echo "<td>" . $value[2]."</td>";
-                //     echo "<td>" . $value[3]."</td>";
-                //     echo "</tr>";
-                // }
+                $conn = new DB();
+                $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM", []);
+                foreach ($result as $key =>$value){
+                    echo "<tr>";
+                    $key = $key+1;
+                    echo "<td>".$key."</td>";
+                    if($value[7] == null){
+                        echo "<td style='width:40%'>-</td>";
+                    }else{
+                        echo "<td style='width:40%'>".$value[7]."</td>";
+                    }
+                    echo "<td>" . $value[3]."</td>";
+                    echo "<td>" . $value[6]."</td>";
+                    echo "<td>" . $value[8]."</td>";
+                    echo "</tr>";
+                }
             ?>
         </table>
     </div>
