@@ -112,10 +112,24 @@
                     <th>6</th>
                 </tr>
                 <?php
-                    //TBA
+                    require_once '../DBConnection.php';
+                    $conn = new DB();
+                    $hasil = $conn->executeStoredProcedure("EXEC Tabel6a_PenelitianDTPSMahasiswa", []);
+                    foreach ($hasil as $row){
+                        echo "<tr>";
+                        echo "<td>".$row[0]."</td>";
+                        echo "<td>".$row[1]."</td>";
+                        echo "<td>".$row[2]."</td>";
+                        echo "<td>".$row[3]."</td>";
+                        echo "<td>".$row[4]."</td>";
+                        echo "<td>".$row[5]."</td>";
+                        echo "</tr>";
+                    }
                 ?>
                 <tr>
                 <td colspan="4">Jumlah</td>
+                <td>x</td>
+                <td>x</td>
                 <td>x</td>
                 <td>x</td>
                 </tr>
