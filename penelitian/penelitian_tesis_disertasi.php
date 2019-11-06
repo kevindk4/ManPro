@@ -112,6 +112,7 @@
                     <th>6</th>
                 </tr>
                 <?php
+                    /*
                     require_once '../DBConnection.php';
                     $conn = new DB();
                     $hasil = $conn->executeStoredProcedure("EXEC Tabel6a_PenelitianDTPSMahasiswa", []);
@@ -125,11 +126,10 @@
                         echo "<td>".$row[5]."</td>";
                         echo "</tr>";
                     }
+                    */
                 ?>
                 <tr>
                 <td colspan="4">Jumlah</td>
-                <td>x</td>
-                <td>x</td>
                 <td>x</td>
                 <td>x</td>
                 </tr>
