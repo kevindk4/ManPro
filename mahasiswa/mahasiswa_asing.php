@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Mahasiswa Asing</title>
+        <title>KS Tridharma Pengabdian</title>
 
     </head>
     <body>
@@ -31,7 +31,7 @@
                         <a href="../ks_tridharma/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
                         <a href="../ks_tridharma/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
                         <a href="../ks_tridharma/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
-                    </div>
+                    </div>    
 
                     <a  href="#" class="w3-block w3-left-align" onclick="myAccFuncc()">
                         Mahasiswa <i class="fa fa-caret-down"></i>
@@ -92,7 +92,144 @@
                 <p>Universitas Katolik Parahyangan</p>
             </div>
         </div>
-        <div><!--insert here--></div>
+        <div>
+        <style type="text/css">
+        .tg  {
+            border-collapse:collapse;border-spacing:0;
+        }
+        .tg td{
+            font-family:Arial, sans-serif;
+            font-size:14px;
+            padding:10px 5px;
+            border-style:solid;
+            border-width:1px;
+            overflow:hidden;
+            word-break:normal;
+            border-color:black;
+        }
+        .tg th{
+            font-family:Arial, sans-serif;
+            font-size:14px;
+            font-weight:normal;
+            padding:10px 5px;
+            border-style:solid;
+            border-width:1px;
+            overflow:hidden;
+            word-break:normal;
+            border-color:black;}
+        .tg .tg-cly1{
+            text-align:left;
+            vertical-align:middle
+        }
+        .tg .tg-lboi{
+            border-color:inherit;
+            text-align:left;
+            vertical-align:middle
+        }
+        .tg .tg-9wq8{border-color:inherit;
+            text-align:center;
+            vertical-align:middle
+        }
+        .tg .tg-uyni{background-color:#c0c0c0;
+            color:#000000;border-color:inherit;
+            text-align:center;
+            vertical-align:middle
+        }
+        .tg .tg-nrix{
+            text-align:center;
+            vertical-align:middle
+        }
+        .tg .tg-0lax{
+            text-align:left;
+            vertical-align:top
+        }     
+        </style>
+            <table class="tg">
+            <tr>
+                <th class="tg-uyni" rowspan="2">No.</th>
+                <th class="tg-uyni" rowspan="2">Program Studi</th>
+                <th class="tg-uyni" colspan="3">Jumlah Mahasiswa Aktif</th>
+                <th class="tg-uyni" colspan="3">Jumlah Mahasiswa Asing Penuh Waktu (full-time)</th>
+                <th class="tg-uyni" colspan="3">Jumlah Mahasiswa Asing Penuh Waktu (part-time)</th>
+            </tr>
+            <tr>
+                <th class="tg-uyni" >TS-2</th>
+                <th class="tg-uyni" >TS-1</th>
+                <th class="tg-uyni" >TS</th>
+                <th class="tg-uyni" >TS-2</th>
+                <th class="tg-uyni" >TS-1</th>
+                <th class="tg-uyni" >TS</th>
+                <th class="tg-uyni" >TS-2</th>
+                <th class="tg-uyni" >TS-1</th>
+                <th class="tg-uyni" >TS</th>
+            </tr>
+            <tr>
+                <td class="tg-9wq8">1</td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+            </tr>
+            <tr>
+                <td class="tg-9wq8">2</td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+            </tr>
+            <tr>
+                <td class="tg-9wq8">3</td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+            </tr>
+            <tr>
+                <td class="tg-9wq8">4</td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+            </tr>
+            <tr>
+                <td class="tg-9wq8">5</td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+                <td class="tg-9wq8"></td>
+            </tr>
+            </table>
+        </div>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
