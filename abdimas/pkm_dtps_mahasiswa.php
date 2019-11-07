@@ -28,9 +28,9 @@
                         Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
                     </a>
                     <div id="demoAcc" class="w3-hide w3-blue w3-card">
-                        <a href="../home/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
-                        <a href="../home/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
-                        <a href="../home/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
+                        <a href="../ks_tridharma/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
+                        <a href="../ks_tridharma/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
+                        <a href="../ks_tridharma/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
                     </div>    
 
                     <a  href="#" class="w3-block w3-left-align" onclick="myAccFuncc()">
