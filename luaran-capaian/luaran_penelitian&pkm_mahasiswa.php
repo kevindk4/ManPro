@@ -92,7 +92,561 @@
                 <p>Universitas Katolik Parahyangan</p>
             </div>
         </div>
-        <div><!--insert here--></div>
+        <div>
+        <div class="w3-container">
+
+            <div class="w3-panel w3-flat-peter-river w3-large">
+                <h2>A. Capaian Pembelajaran</h2>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">Tahun Lulus</th>
+                    <th rowspan="2">Jumlah Lulusan</th>
+                    <th colspan="3">Indeks Prestasi Kumulatif (IPK)</th>
+                    <!-- <th rowspan="2"> Jumlah</th> -->
+
+                </tr>
+                <tr>
+                    <td>Min</td>
+                    <td>Rata-Rata</td>
+                    <td>Maks</td>
+                </tr>
+                <?php
+                // $conn = mysqli_connect("localhost", "root", "luaran");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+        <div class="w3-container">
+
+            <div class="w3-panel w3-flat-peter-river w3-large">
+                <h2>B. Prestasi Mahasiswa</h2>
+            </div>
+
+            <div class="w3-panel w3-gray ">
+                <h5>Prestasi Akademik</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">Nama Kegiatan</th>
+                    <th rowspan="2">Tahun Perolehan</th>  
+                    <th colspan="3">Tingkat</th>
+                    <th rowspan="2"> Prestasi Yang Dicapai</th>
+
+                </tr>
+                <tr>
+                    <td>Lokal/Wilayah</td>
+                    <td>Nasional</td>
+                    <td>Internasional</td>
+                </tr>
+                <?php
+                 //connection
+                 // $conn = mysqli_connect("localhost", "root", "");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+        
+
+        <div class="w3-container">
+
+            <div class="w3-panel w3-gray ">
+                <h5>Prestasi Non Akademik</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">Nama Kegiatan</th>
+                    <th rowspan="2">Tahun Perolehan</th>  
+                    <th colspan="3">Tingkat</th>
+                    <th rowspan="2"> Prestasi Yang Dicapai</th>
+
+                </tr>
+                <tr>
+                    <td>Lokal/Wilayah</td>
+                    <td>Nasional</td>
+                    <td>Internasional</td>
+                </tr>
+                <?php
+                 //connection
+                 // $conn = mysqli_connect("localhost", "root", "");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+        <div class="w3-container">
+
+            <div class="w3-panel w3-flat-peter-river w3-large">
+                <h2>C. Efektivitas dan Produktivitas Pendidikan</h2>
+            </div>
+
+            <div class="w3-panel">
+                <h5>Diisi oleh pengusul dari Program Studi pada Program Sarjana/Sarjana Terapan :</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">Tahun Masuk</th>
+                    <th rowspan="2">Jumlah Mahasiswa Diterima</th>
+                    <th colspan="7">Jumlah Mahasiswa yang Lulus pada</th>
+                    <th rowspan="2">Jumlah Lulusan s.d. Akhir TS</th>
+                    <th rowspan="2">Rata-rata Masa Studi</th>
+
+                </tr>
+                <tr>
+                    <td>Akhir TS-6</td>
+                    <td>Akhir TS-5</td>
+                    <td>Akhir TS-4</td>
+                    <td>Akhir TS-3</td>
+                    <td>Akhir TS-2</td>
+                    <td>Akhir TS-1</td>
+                    <td>Akhir TS</td>
+                </tr>
+                <?php
+                 //connection
+                 // $conn = mysqli_connect("localhost", "root", "");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+        <div class="w3-container">
+
+            <div class="w3-panel w3-flat-peter-river w3-large">
+                <h2>D. Daya Saing Lulusan</h2>
+            </div>
+
+            <div class="w3-panel">
+                <h5>Tabel 8.d.1) Waktu Tunggu Lulusan :</h5>
+            </div>
+
+            <div class="w3-panel">
+                <h5>Diisi oleh pengusul dari Program Studi pada Program Sarjana :</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">Tahun Lulus</th>
+                    <th rowspan="2">Jumlah Lulusan</th>
+                    <th rowspan="2">Jumlah Lulusan yang Terlacak</th>  
+                    <th colspan="3">Jumlah Lulusan Terlacak dengan Waktu Tunggu Mendapatkan Pekerjaan</th>
+                </tr>
+                <tr>
+                    <td>WT < 6 bulan</td>
+                    <td>6 ≤ WT ≤ 18 bulan</td>
+                    <td>WT > 18 bulan</td>
+                </tr>
+
+                <?php
+                 //connection
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+        <div class="w3-container">
+
+            <div class="w3-panel">
+                <h5>Tabel 8.d.2) Kesesuaian Bidang Kerja Lulusan :</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">Tahun Lulus</th>
+                    <th rowspan="2">Jumlah Lulusan</th>
+                    <th rowspan="2">Jumlah Lulusan yang Terlacak</th>  
+                    <th colspan="3">Jumlah Lulusan Terlacak dengan Tingkat Kesesuaian Bidang Kerja</th>
+                </tr>
+                <tr>
+                    <td>Rendah</td>
+                    <td>Sedang</td>
+                    <td>Tinggi</td>
+                </tr>
+
+                <?php
+                 //connection
+                 // $conn = mysqli_connect("localhost", "root", "");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+
+        <div class="w3-container">
+
+            <div class="w3-panel w3-flat-peter-river w3-large">
+                <h2>E. Kinerja Lulusan</h2>
+            </div>
+
+            <div class="w3-panel">
+                <h5>Tabel 8.e.1) Tempat Kerja Lulusan :</h5>
+            </div>
+
+            <div class="w3-panel">
+                <h5>Diisi oleh pengusul dari Program Studi pada Program Sarjana :</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">Tahun Lulus</th>
+                    <th rowspan="2">Jumlah Lulusan</th>
+                    <th rowspan="2">Jumlah Lulusan yang Terlacak</th>  
+                    <th colspan="3">Jumlah Lulusan Terlacak yang Bekerja berdasarkan Tingkat/Ukuran Tempat Kerja/Berwirausaha</th>
+                </tr>
+                <tr>
+                    <td>Lokal/ Wilayah/ Berwirausaha tidak Berizin</td>
+                    <td>Nasional/ Berwirausaha Berizin</td>
+                    <td>Multinasiona/ Internasional</td>
+                </tr>
+
+                <?php
+                 //connection
+                 // $conn = mysqli_connect("localhost", "root", "luaran");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+         <div class="w3-container">
+
+            <div class="w3-panel">
+                <h5>Tabel 8.e.2) Kepuasan Pengguna :</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">Jenis Kemampuan</th>
+                    <th colspan="4">Tingkat Kepuasan Pengguna (%)</th>
+                    <th rowspan="2">Rencana Tindak Lanjut oleh UPPS/PS</th>  
+                </tr>
+                <tr>
+                    <td>Sangat Baik</td>
+                    <td>Baik</td>
+                    <td>Cukup</td>
+                    <td>Kurang</td>
+                </tr>
+
+                <?php
+                 //connection
+                 // $conn = mysqli_connect("localhost", "root", "luaran");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+         <div class="w3-container">
+
+            <div class="w3-panel w3-flat-peter-river w3-large">
+                <h2>F. Luaran Penelitian dan PkM Mahasiswa</h2>
+            </div>
+
+            <div class="w3-panel">
+                <h5>Tabel 8.f.1) Publikasi Ilmiah mahasiswa :</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">Media Publikasi</th>
+                    <th colspan="3">Jumlah Judul</th>
+                    <th rowspan="2">Jumlah</th>  
+                </tr>
+                <tr>
+                    <td>TS-2</td>
+                    <td>TS-1</td>
+                    <td>TS</td>
+                </tr>
+
+                <?php
+                 //connection
+                 // $conn = mysqli_connect("localhost", "root", "luaran");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+        <div class="w3-container">
+        
+            <div class="w3-panel">
+                <h5>Tabel 8.f.1) Pagelaran/pameran/presentasi/publikasi Ilmiah mahasiswa :</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">Jenis</th>
+                    <th colspan="3">Jumlah Judul</th>
+                    <th rowspan="2">Jumlah</th>  
+                </tr>
+                <tr>
+                    <td>TS-2</td>
+                    <td>TS-1</td>
+                    <td>TS</td>
+                </tr>
+
+                <?php
+                //connection
+                // $conn = mysqli_connect("localhost", "root", "luaran");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+        <div class="w3-container">
+        
+            <div class="w3-panel">
+                <h5>Tabel 8.f.2) Karya ilmiah mahasiswa yang disitasi :</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">Nama Mahasiswa</th>
+                    <th rowspan="2">Judul Artikel yang Disitasi (Jurnal/Buku, Volume, Tahun, Nomor, Halaman)</th>  
+                    <th rowspan="2">Jumlah Sitasi</th>
+                </tr>
+
+                <?php
+                //connection
+                // $conn = mysqli_connect("localhost", "root", "luaran");
+                //     // Check connection
+                //     if ($conn->connect_error) {
+                //     die("Connection failed: " . $conn->connect_error);
+                //     } 
+                //     $sql = "SELECT * FROM pegawai INNER JOIN  role on role.idRole = pegawai.idRole";
+                //     $result = $conn->query($sql);
+                //     if ($result->num_rows > 0) {
+                //     // output data of each row
+                //     while($row = $result->fetch_assoc()) {
+                //     echo "<tr>";
+                //                 echo "<td>".$row['idPegawai']."</td>";
+                //                 echo "<td>".$row['nama']."</td>";
+                //                 echo "<td>".$row['username']."</td>";
+                //                 echo "<td>".$row['namaRole']."</td>";
+                //                 echo "</tr>";
+                // }
+                // echo "</table>";
+                // } else { echo "0 results"; }
+                // $conn->close();
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+        <div class="w3-container">
+        
+            <div class="w3-panel">
+                <h5>Tabel 8.f.3) Produk/jasa yang dihasilkan mahasiswa yang diadopsi oleh industri/masyarakat :</h5>
+            </div>
+
+            <table class="w3-white">
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">Nama Mahasiswa</th>
+                    <th rowspan="2">Nama Produk/Jasa</th>  
+                    <th rowspan="2">Deskripsi Produk/Jasa</th>
+                    <th rowspan="2">Bukti</th>
+                </tr>
+
+                <?php
+                //connection
+                
+                ?>
+                </table>
+                <br>
+            <div>     
+        </div>
+
+
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
