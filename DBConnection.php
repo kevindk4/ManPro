@@ -14,7 +14,7 @@ class DB{
         $this->dbconnection = sqlsrv_connect($this->servername,$this->dbConInfo);
         
 		if ($this->dbconnection) {
-			echo "Connection established.<br />";
+			//success
 		} else {
 			echo "Connection could not be established.<br />";
 			die(print_r(sqlsrv_errors(), true));
@@ -38,7 +38,7 @@ class DB{
 			} 
 			$result[] = $row;
 		}
-		sqlsrv_close($this->db_connection);
+		sqlsrv_close($this->dbconnection);
 		return $result;
 	}
 }

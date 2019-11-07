@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-        <link rel="stylesheet" href="../style/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Profil Dosen</title>
+<head>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Profil Dosen</title>
 
-    </head>
+</head>
     <body>
         <div class="heading w3-flat-peter-river">
             <div class="w3-cell w3-cell-middle w3-padding">
@@ -52,49 +52,93 @@
                         <a href="pkm_lainnya.php" class='w3-bar-item' style="color:white;">Luaran Penelitian / PkM Lainnya</a>
                     </div>
 
-                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc3()">Keuangan, Sarana, dan Prasarana <i class="fa fa-caret-down"></i></a>
-                    <div class='w3-hide w3-blue w3-card' id='demoAcc3'>
-                        <a href="../sarpras/penggunaan_dana.php" class='w3-bar-item' style="color:white">Pengunaan Dana</a>
-                    </div>
-
-                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc4()">Pendidikan <i class="fa fa-caret-down"></i></a>
-                    <div class='w3-hide w3-blue w3-card' id='demoAcc4'>
-                        <a href="../pendidikan/pendidikan.php" class='w3-bar-item' style="color:white">Integrasi Kegiatan Penelitian dalam Pembelajaran</a>
-                    </div>
-
-                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc5()">Penelitian <i class="fa fa-caret-down"></i></a>
-                    <div class='w3-hide w3-blue w3-card' id='demoAcc5'>
-                        <a href="../penelitian/penelitian_mahasiswa.php" class='w3-bar-item' style="color:white">Penelitian yang Melibatkan Mahasiswa</a>
-                    </div>
-
-                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc6()">Pengabdian Kepada Masyarakat <i class="fa fa-caret-down"></i></a>
-                    <div class='w3-hide w3-blue w3-card' id='demoAcc6'>
-                        <a href="../abdimas/pkm_dtps_mahasiswa.php" class='w3-bar-item' style="color:white">PkM DTPS yang Melibatkan Mahasiswa</a>
-                    </div>
-
-                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc7()">Luaran dan Capaian Tridharma <i class="fa fa-caret-down"></i></a>
-                    <div class='w3-hide w3-blue w3-card' id='demoAcc7'>
-                        <a href="../luaran-capaian/luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
-                        <a href="../luaran-capaian/luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
-                    </div>
+                <a href="#" class="w3-block w3-left-align" onclick="myAccFunc3()">Keuangan, Sarana, dan Prasarana <i class="fa fa-caret-down"></i></a>
+                <div class='w3-hide w3-blue w3-card' id='demoAcc3'>
+                    <a href="../sarpras/penggunaan_dana.php" class='w3-bar-item' style="color:white">Pengunaan Dana</a>
                 </div>
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+                <a href="#" class="w3-block w3-left-align" onclick="myAccFunc4()">Pendidikan <i class="fa fa-caret-down"></i></a>
+                <div class='w3-hide w3-blue w3-card' id='demoAcc4'>
+                    <a href="../pendidikan/pendidikan.php" class='w3-bar-item' style="color:white">Integrasi Kegiatan Penelitian dalam Pembelajaran</a>
+                </div>
+
+                <a href="#" class="w3-block w3-left-align" onclick="myAccFunc5()">Penelitian <i class="fa fa-caret-down"></i></a>
+                <div class='w3-hide w3-blue w3-card' id='demoAcc5'>
+                    <a href="../penelitian/penelitian_mahasiswa.php" class='w3-bar-item' style="color:white">Penelitian yang Melibatkan Mahasiswa</a>
+                </div>
+
+                <a href="#" class="w3-block w3-left-align" onclick="myAccFunc6()">Pengabdian Kepada Masyarakat <i class="fa fa-caret-down"></i></a>
+                <div class='w3-hide w3-blue w3-card' id='demoAcc6'>
+                    <a href="../abdimas/pkm_dtps_mahasiswa.php" class='w3-bar-item' style="color:white">PkM DTPS yang Melibatkan Mahasiswa</a>
+                </div>
+
+                <a href="#" class="w3-block w3-left-align" onclick="myAccFunc7()">Luaran dan Capaian Tridharma <i class="fa fa-caret-down"></i></a>
+                <div class='w3-hide w3-blue w3-card' id='demoAcc7'>
+                    <a href="../luaran-capaian/luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
+                    <a href="../luaran-capaian/luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
+                </div>
             </div>
-            <div class="w3-cell w3-cell-middle w3-padding">
-                <img src="../image/Logo-UNPAR.png" height="100px" width="100px">
-            </div>
-            <div class="w3-cell w3-cell-middle w3-padding">
-                <img src="../image/logo_if.png" height="100px" width="400px">
-            </div>
-            <div class="w3-cell w3-cell-middle w3-padding">
-                <p>Program Studi Informatika</p>
-                <p>Universitas Katolik Parahyangan</p>
-            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         </div>
-        <div><!--insert here--></div>
-        <div class="footer">
-            <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
+        <div class="w3-cell w3-cell-middle w3-padding">
+            <img src="../image/Logo-UNPAR.png" height="100px" width="100px">
         </div>
-    </body>
-    <script type="text/javascript" src="../script/script.js"></script>
+        <div class="w3-cell w3-cell-middle w3-padding">
+            <img src="../image/logo_if.png" height="100px" width="400px">
+        </div>
+        <div class="w3-cell w3-cell-middle w3-padding">
+            <p>Program Studi Informatika</p>
+            <p>Universitas Katolik Parahyangan</p>
+        </div>
+    </div>
+    <div id="table">
+        <h1>Profil Dosen</h1>
+        <table>
+            <tr>
+                <th>Nama Dosen</th>
+                <th>NIDN</th>
+                <th>Pendidikan</th>
+                <th>Pendidikan Doktor</th>
+                <th>Bidang Keahlian</th>
+                <th>Kesesuaian Kompetensi</th>
+                <th>Jabatan Akademik</th>
+                <th>Sertifikat Pendidik</th>
+                <th>Sertifikat Kompetensi</th>
+                <th>Mata Kuliah Program Studi</th>
+                <th>Kesesuaian Bidang Keahlian</th>
+                <th>Mata Kuliah Diluar Program Studi</th>
+            </tr>
+            <?php
+            require_once '../DBConnection.php';
+            $conn = new DB();
+            $hasil = $conn->executeStoredProcedure("EXEC Tabel3a1_DosenTetapUPPS", []);
+            foreach ($hasil as $row){
+                echo "<tr>";
+                echo "<td>".$row[0]."</td>";
+                echo "<td>".$row[1]."</td>";
+                echo "<td>".$row[2]."</td>";
+                echo "<td>".$row[3]."</td>";
+                echo "<td>".$row[4]."</td>";
+                echo "<td>".$row[5]."</td>";
+                echo "<td>".$row[6]."</td>";
+                echo "<td>".$row[7]."</td>";
+                if($row[8]!=""){
+                    echo "<td>".$row[8]."</td>";
+                }else{
+                    echo "<td>-</td>";
+                }
+                echo "<td>".$row[9]."</td>";
+                echo "<td>".$row[10]."</td>";
+                echo "<td>".$row[11]."</td>";
+                echo "</tr>";
+            }
+            ?>
+            </table>
+    </div>
+    <div class="footer">
+        <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/script.js"></script>
+
 </html>

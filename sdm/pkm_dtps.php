@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-        <link rel="stylesheet" href="../style/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>PkM DTPS</title>
-
-    </head>
+<head>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PkM DTPS</title>
+  </head>
     <body>
         <div class="heading w3-flat-peter-river">
             <div class="w3-cell w3-cell-middle w3-padding">
@@ -77,24 +76,405 @@
                         <a href="../luaran-capaian/luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
                         <a href="../luaran-capaian/luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
                     </div>
-                </div>
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>
-            <div class="w3-cell w3-cell-middle w3-padding">
-                <img src="../image/Logo-UNPAR.png" height="100px" width="100px">
-            </div>
-            <div class="w3-cell w3-cell-middle w3-padding">
-                <img src="../image/logo_if.png" height="100px" width="400px">
-            </div>
-            <div class="w3-cell w3-cell-middle w3-padding">
-                <p>Program Studi Informatika</p>
-                <p>Universitas Katolik Parahyangan</p>
-            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         </div>
-        <div><!--insert here--></div>
-        <div class="footer">
-            <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
+        <div class="w3-cell w3-cell-middle w3-padding">
+            <img src="../image/Logo-UNPAR.png" height="100px" width="100px">
         </div>
-    </body>
-    <script type="text/javascript" src="../script/script.js"></script>
+        <div class="w3-cell w3-cell-middle w3-padding">
+            <img src="../image/logo_if.png" height="100px" width="400px">
+        </div>
+        <div class="w3-cell w3-cell-middle w3-padding">
+            <p>Program Studi Informatika</p>
+            <p>Universitas Katolik Parahyangan</p>
+        </div>
+    </div>
+    <div id="table">
+        <h1>Pengabdian kepada Masyarakat DTPS</h1>
+        <table>
+            <tr>
+                <th rowspan="2">No.</th>
+                <th rowspan="2">Sumber Pembiayaan</th>
+                <th colspan="3">Jumlah Judul</th>
+                <th rowspan="2">Jumlah</th>
+            </tr>
+            <tr>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+            <!-- Tinggal dilengkapin si filenya -->
+            <?php
+            require_once '../DBConnection.php';
+            $conn = new DB();
+            $hasil = $conn->executeStoredProcedure("EXEC Tabel3b3_PKMDTPS", []);
+            $i = 1;
+            $jumlah1 = 0;
+            $jumlah2 = 0;
+            $jumlah3 = 0;
+            $jumlah4 = 0;
+            foreach ($hasil as $row) {
+                echo "<tr>";
+                echo "<td>" . $i . "</td>";
+                $i = $i + 1;
+                echo "<td>" . $row[0] . "</td>";
+                echo "<td>" . $row[1] . "</td>";
+                echo "<td>" . $row[2] . "</td>";
+                echo "<td>" . $row[3] . "</td>";
+                echo "<td>" . $row[4] . "</td>";
+                $jumlah1 += $row[1];
+                $jumlah2 += $row[2];
+                $jumlah3 += $row[3];
+                $jumlah4 += $row[4];
+                echo "</tr>";
+            }
+            ?>
+            <tr>
+                <td colspan="2">Jumlah</td>
+                <?php
+                echo "<td>" . $jumlah1 . "</td>";
+                echo "<td>" . $jumlah2 . "</td>";
+                echo "<td>" . $jumlah3 . "</td>";
+                echo "<td>" . $jumlah4 . "</td>";
+                ?>
+            </tr>
+        </table>
+
+        <h1>Publikasi Ilmiah DTPS</h1>
+        <table>
+            <tr>
+                <th rowspan="2">No.</th>
+                <th rowspan="2">Media Publikasi</th>
+                <th colspan="3">Jumlah Judul</th>
+                <th rowspan="2">Jumlah</th>
+            </tr>
+            <tr>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Jurnal nasional tidak terakreditasi</td>
+                <?php
+                $jumlah1 = 0;
+                $jumlah2 = 0;
+                $jumlah3 = 0;
+                $jumlah4 = 0;
+
+                $tulisan1 = "Jurnal nasional tidak terakreditasi";
+                $hasil2 = $conn->executeStoredProcedure( "EXEC Tabel3b4_PartJurnal", []); 
+                    if($hasil2[0][0] == $tulisan1)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[0][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlah1+= $hasil2[0][$i];
+                            }else if($i == 2){
+                                $jumlah2+= $hasil2[0][$i];
+                            }else if($i == 3){
+                                $jumlah3+= $hasil2[0][$i];
+                            }else{
+                                $jumlah4+= $hasil2[0][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jurnal nasional terakreditasi</td>
+                <?php
+                $tulisan2 = "Jurnal nasional terakreditasi";
+                    if($hasil2[1][0] == $tulisan2)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[1][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlah1+= $hasil2[1][$i];
+                            }else if($i == 2){
+                                $jumlah2+= $hasil2[1][$i];
+                            }else if($i == 3){
+                                $jumlah3+= $hasil2[1][$i];
+                            }else{
+                                $jumlah4+= $hasil2[1][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jurnal internasional</td>
+                <?php
+                $tulisan3 = "Jurnal internasional";
+                    if($hasil2[2][0] == $tulisan3)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[2][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlah1+= $hasil2[2][$i];
+                            }else if($i == 2){
+                                $jumlah2+= $hasil2[2][$i];
+                            }else if($i == 3){
+                                $jumlah3+= $hasil2[2][$i];
+                            }else{
+                                $jumlah4+= $hasil2[2][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Jurnal internasional bereputasi</td>
+                <?php
+                $tulisan4 = "Jurnal internasional bereputasi";
+                    if($hasil2[3][0] == $tulisan4)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[3][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlah1+= $hasil2[3][$i];
+                            }else if($i == 2){
+                                $jumlah2+= $hasil2[3][$i];
+                            }else if($i == 3){
+                                $jumlah3+= $hasil2[3][$i];
+                            }else{
+                                $jumlah4+= $hasil2[3][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Seminar wilayah/lokal/perguruan tinggi</td>
+                <?php
+                $tulisan5 = "Seminar wilayah/lokal/perguruan tinggi";
+                    if($hasil2[4][0] == $tulisan5)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[4][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlah1+= $hasil2[4][$i];
+                            }else if($i == 2){
+                                $jumlah2+= $hasil2[4][$i];
+                            }else if($i == 3){
+                                $jumlah3+= $hasil2[4][$i];
+                            }else{
+                                $jumlah4+= $hasil2[4][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Seminar nasional</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Seminar internasional</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Tulisan di media massa wilayah</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Tulisan di media massa nasional</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Tulisan di media massa internasional</td>
+                <?php
+                    for ($i=1; $i <= 4; $i++) { 
+                        echo "<td> - </td>";
+                    }
+                ?>
+            </tr>
+            <!-- Tinggal dilengkapin si filenya -->
+            <tr>
+                <td colspan="2">Jumlah</td>
+                <?php
+                    echo "<td>".$jumlah1."</td>";
+                    echo "<td>".$jumlah2."</td>";
+                    echo "<td>".$jumlah3."</td>";
+                    echo "<td>".$jumlah4."</td>";
+                ?>
+            </tr>
+        </table>
+
+        <h1>Pagelaran/pameran/presentasi/publikasi ilmiah DTPS</h1>
+        <table>
+            <tr>
+                <th rowspan="2">No.</th>
+                <th rowspan="2">Media Publikasi</th>
+                <th colspan="3">Jumlah Judul</th>
+                <th rowspan="2">Jumlah</th>
+            </tr>
+            <tr>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Publikasi di Jurnal nasional tidak terakreditasi</td>
+                <?php
+                $jumlah1 = 0;
+                $jumlah2 = 0;
+                $jumlah3 = 0;
+                $jumlah4 = 0;
+
+                $tulisan1 = "Jurnal nasional tidak terakreditasi";
+                $hasil2 = $conn->executeStoredProcedure( "EXEC Tabel3b4_PartJurnal", []); 
+                    if($hasil2[0][0] == $tulisan1)
+                    {
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td>".$hasil2[0][$i]."</td>";
+
+                            if($i == 1){
+                                $jumlah1+= $hasil2[0][$i];
+                            }else if($i == 2){
+                                $jumlah2+= $hasil2[0][$i];
+                            }else if($i == 3){
+                                $jumlah3+= $hasil2[0][$i];
+                            }else{
+                                $jumlah4+= $hasil2[0][$i];
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= 4; $i++) { 
+                            echo "<td> - </td>";
+                        }
+                    }
+                ?>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Publikasi di Jurnal nasional terakreditasi</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Publikasi di Jurnal internasional</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Publikasi di Jurnal internasional bereputasi</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Publikasi di Seminar wilayah/lokal/perguruan tinggi</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Publikasi di Seminar nasional</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Publikasi di Seminar internasional</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Pagelaran/pameran/prestasi dalam forum di tingkat wilayah</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Pagelaran/pameran/prestasi dalam forum di tingkat nasional</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Pagelaran/pameran/prestasi dalam forum di tingkat internasional</td>
+            </tr>
+            <!-- Tinggal dilengkapin si filenya -->
+            <?php
+
+            ?>
+            <tr>
+                <td colspan="2">Jumlah</td>
+                <td>x</td>
+                <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+            </tr>
+        </table>
+    </div><br><br><br><br>
+    <div class="footer">
+        <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/script.js"></script>
+
 </html>

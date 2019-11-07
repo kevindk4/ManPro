@@ -92,7 +92,34 @@
                 <p>Universitas Katolik Parahyangan</p>
             </div>
         </div>
-        <div><!--insert here--></div>
+        <div>
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama Dosen</th>
+                    <th>Tema PkM sesuai Roadmap</th>
+                    <th>Nama Mahasiswa</th>
+                    <th> Judul Kegiata</th>
+                    <th> Tahun </th>
+                </tr>   
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                </tr>
+                <!-- biaya operasional pendidikan &  kemahasiswaan-->
+                <?php
+                
+                ?>
+                <tr>
+                    <td colspan="5">Jumlah</td>
+                    <td>x</td>
+                </tr>
+            </table>
+        </div>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
         </div>
