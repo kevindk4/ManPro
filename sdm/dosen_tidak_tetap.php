@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,25 +14,24 @@
     <title>Dosen Tidak Tetap</title>
 
 </head>
-
-<body>
-    <div class="heading w3-flat-peter-river">
-        <div class="w3-cell w3-cell-middle w3-padding">
-            <div id="mySidenav" class="sidenav">
-                <div id="head_slide_navbar">
-                    <img src="../image/logo_if.png" height="50%" width="50%">
-                </div>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="../home/home.php">Home</a>
-                <a href="../home/visi_misi.php">Visi dan Misi</a>
-                <a href="#" class="w3-block w3-left-align" onclick="myAccFunc()">
-                    Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
-                </a>
-                <div id="demoAcc" class="w3-hide w3-blue w3-card">
-                    <a href="../home/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
-                    <a href="../home/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
-                    <a href="../home/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
-                </div>
+    <body>
+        <div class="heading w3-flat-peter-river">
+            <div class="w3-cell w3-cell-middle w3-padding">
+                <div id="mySidenav" class="sidenav" >
+                    <div id="head_slide_navbar">
+                        <img src="../image/logo_if.png" height="50%" width="50%">
+                    </div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="../home/home.php">Home</a>
+                    <a href="../home/visi_misi.php">Visi dan Misi</a>
+                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc()">
+                        Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc" class="w3-hide w3-blue w3-card">
+                        <a href="../ks_tridharma/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
+                        <a href="../ks_tridharma/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
+                        <a href="../ks_tridharma/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
+                    </div>
 
                 <a href="#" class="w3-block w3-left-align" onclick="myAccFuncc()">
                     Mahasiswa <i class="fa fa-caret-down"></i>
