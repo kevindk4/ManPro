@@ -169,6 +169,37 @@
                 <th class="tg-uyni" rowspan="2">Waktu dan Durasi</th>
                 <th class="tg-uyni" rowspan="2">Bukti Kerjasama</th>
             </tr>
+            <?php
+            $conn = new DB();
+            $result = $conn->executeStoredProcedure("EXEC Tabel 1a_KerjasamaTridharma", []);
+
+            foreach ($result as $key => $value) {
+                echo "<tr>";
+                $key = $key + 1;
+                echo "<td>" . $key . "</td>";
+                echo "<td>" . $value[1] . "</td>";
+                if ($value[2] == "Internasional") {
+                    echo "<td>" . YES . "</td>";
+                    echo "<td>" . NO . "</td>";
+                    echo "<td>" . NO . "</td>";
+                } else if ($value[2] == "Nasional") {
+                    echo "<td>" . NO . "</td>";
+                    echo "<td>" . YES . "</td>";
+                    echo "<td>" . NO . "</td>";
+                } else {
+                    echo "<td>" . NO . "</td>";
+                    echo "<td>" . NO . "</td>";
+                    echo "<td>" . YES . "</td>";
+                }
+                echo "<td>" . $value[3] . "</td>";
+                echo "<td>" . $value[4] . "</td>";
+                echo "<td>" . $value[5] . "</td>";
+                echo "<td>" . $value[6] . "</td>";
+                echo "<td>" . $value[7] . "</td>";
+                echo "</tr>";
+            }
+            ?>
+
             <tr>
                 <td class="tg-uyni">Internasional</td>
                 <td class="tg-uyni">Nasional</td>
