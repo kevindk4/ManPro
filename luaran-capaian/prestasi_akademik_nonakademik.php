@@ -78,7 +78,7 @@
                     <div class='w3-hide w3-blue w3-card' id='demoAcc7'>
                         <a href="luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
                         <a href="capaian_pembelajaran.php" class='w3-bar-item' style="color:white">Capaian Pembelajaran</a>
-
+                        <a href="prestasi_akademik_nonakademik.php" class='w3-bar-item' style="color:white">Prestasi Akademik dan Non-Akademik</a>
                         <a href="luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
                     </div>
                 </div>
@@ -96,13 +96,13 @@
             </div>
         </div>
         <div id="table">
-        <h1></h1>
+        <h1>PRESTASI AKADEMIK</h1>
         <table>
             <tr>
-                <th>NPM</th>
-                <th>Nama Mahasiswa</th>
-                <th>Semester</th>
-                <th>IPK</th>
+            <th>Kegiatan </th>
+                <th>Tahun</th>
+                <th>Tingkat</th>
+                <th>Prestasi</th>
            
             </tr>
             <?php
@@ -116,10 +116,12 @@
                 die( print_r( sqlsrv_errors(), true));
             }
             
-            $sql = "SELECT [NPM]
-             ,[Nama]
-             ,[Semester],[IPK]
-            FROM [Akreditasi2020].[dbo].[Kelulusan_TD]";
+            $sql = "SELECT TOP (1000) [Kegiatan]
+            ,[Tahun]
+            ,[Tingkat]
+            ,[Prestasi]
+        
+        FROM [Akreditasi2020].[dbo].[v_8b1]";
             $stmt = sqlsrv_query( $conn, $sql );
             if( $stmt === false) {
                 die( print_r( sqlsrv_errors(), true) );
@@ -127,31 +129,63 @@
             
             while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
                             echo "<tr>";
-               echo "<td>".$row['NPM']."</td>";
-                echo "<td>".$row['Nama']."</td>";
-                echo "<td>".$row['Semester']."</td>";
-                 echo "<td>".$row['IPK']."</td>";
+                            echo "<td>".$row['Kegiatan']."</td>";
+
+               echo "<td>".$row['Tahun']."</td>";
+                echo "<td>".$row['Tingkat']."</td>";
+                echo "<td>".$row['Prestasi']."</td>";
                 echo "</tr>";
             }
             
             sqlsrv_free_stmt( $stmt);
             
-//             require_once '../DBConnection.php';
-//             $conn = new DB();
+
+            ?>
+            </table>
+    </div>
+    <div id="table">
+        <h1>PRESTASI NON-AKADEMIK</h1>
+        <table>
+            <tr>
+            <th>Tahun</th>
+                <th>Tingkat</th>
+                <th>Prestasi</th>
+            </tr>
+            <?php
+              $servername = "10.100.70.70\akreditasi2020";
+              $username = "guestManPro";
+              $password = "Testing123";
+              $dbname = "akreditasi2020";
+              $dbConInfo= array("Database"=>$dbname,"UID"=>$username,"PWD"=>$password);
+            $conn = sqlsrv_connect( $servername, $dbConInfo );
+            if( $conn === false ) {
+                die( print_r( sqlsrv_errors(), true));
+            }
             
-// $tsql = "SELECT TOP (10) [NPM]
-// ,[Nama]
-// ,[Semester],[IPK]
-// FROM [Akreditasi2020].[dbo].[Kelulusan_TD]"; 
-// $stmt = sqlsrv_query( $conn, $tsql);     
-//         while ($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)){
-//                 echo "<tr>";
-//                 echo "<td>".$row['NPM']."</td>";
-//                 echo "<td>".$row['Nama']."</td>";
-//                 echo "<td>".$row['Semester']."</td>";
-//                 echo "<td>".$row['IPK']."</td>";
-//                 echo "</tr>";
-//             }
+            $sql = "SELECT TOP (1000) [Kegiatan]
+            ,[Tahun]
+            ,[Tingkat]
+            ,[Prestasi]
+            ,[Akademik]
+        FROM [Akreditasi2020].[dbo].[v_8b2]";
+            $stmt = sqlsrv_query( $conn, $sql );
+            if( $stmt === false) {
+                die( print_r( sqlsrv_errors(), true) );
+            }
+            
+            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+                            echo "<tr>";
+                            echo "<td>".$row['Kegiatan']."</td>";
+
+               echo "<td>".$row['Tahun']."</td>";
+                echo "<td>".$row['Tingkat']."</td>";
+                echo "<td>".$row['Prestasi']."</td>";
+                echo "</tr>";
+            }
+            
+            sqlsrv_free_stmt( $stmt);
+            
+
             ?>
             </table>
     </div>
