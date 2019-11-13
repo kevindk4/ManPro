@@ -1,3 +1,6 @@
+<?php
+require "../DBConnection.php"
+?>
 <!DOCTYPE html>
 <html>
 
