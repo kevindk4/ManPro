@@ -184,8 +184,8 @@ require "../DBConnection.php"
                 echo "<td>" . $value[2] . "</td>";
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
-                echo "<td>" . $value[5] . "</td>";
-                echo "<td>" . $value[6] . "</td>";
+                echo "<td>" . $value[5]->format("Y-m-d") . "</td>";
+                echo "<td>" . $value[6]->format("Y-m-d") . "</td>";
                 echo "<td>" . $value[7] . "</td>";
                 echo "</tr>";
             }
