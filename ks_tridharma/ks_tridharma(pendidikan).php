@@ -181,19 +181,7 @@ require "../DBConnection.php"
                 $key = $key + 1;
                 echo "<td>" . $key . "</td>";
                 echo "<td>" . $value[1] . "</td>";
-                if ($value[2] == "Internasional") {
-                    echo "<td>" . YES . "</td>";
-                    echo "<td>" . NO . "</td>";
-                    echo "<td>" . NO . "</td>";
-                } else if ($value[2] == "Nasional") {
-                    echo "<td>" . NO . "</td>";
-                    echo "<td>" . YES . "</td>";
-                    echo "<td>" . NO . "</td>";
-                } else {
-                    echo "<td>" . NO . "</td>";
-                    echo "<td>" . NO . "</td>";
-                    echo "<td>" . YES . "</td>";
-                }
+                echo "<td>" . $value[2] . "</td>";
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
                 echo "<td>" . $value[5] . "</td>";
