@@ -19,7 +19,8 @@ class DB{
 			echo "Connection could not be established.<br />";
 			die(print_r(sqlsrv_errors(), true));
 		}
-    }
+	}
+	
 
     function executeStoredProcedure($query, $param){
         $this->openConnection();
