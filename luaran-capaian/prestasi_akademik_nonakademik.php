@@ -103,7 +103,6 @@
                 <th>Tahun</th>
                 <th>Tingkat</th>
                 <th>Prestasi</th>
-           
             </tr>
             <?php
               $servername = "10.100.70.70\akreditasi2020";
