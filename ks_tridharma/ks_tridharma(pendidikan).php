@@ -186,7 +186,11 @@ require "../DBConnection.php"
             foreach ($result as $key => $value) {
                 $date1 = $value[5];
                 $date2 = $value[6];
-                $interval = $date1->diff($date2);
+                if ($date1 != null && $date2 != null) {
+                    $datediff = $date1 - $date2;
+                } else {
+                    $interval = null;
+                }
 
                 echo "<tr>";
                 $key = $key + 1;
@@ -207,7 +211,11 @@ require "../DBConnection.php"
                 }
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
-                echo "<td>" .  $interval->format("Y-m-d H:i:s") . "</td>";
+                if ($interval != null) {
+                    echo "<td>" .  round($datediff / (60 * 60 * 24)) . "hari </td>";
+                } else {
+                    echo "<td> 0 hari </td>";
+                }
                 echo "<td>" . $value[7] . "</td>";
                 echo "</tr>";
             }
