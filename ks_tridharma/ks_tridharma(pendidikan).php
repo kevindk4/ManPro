@@ -172,6 +172,13 @@ require "../DBConnection.php"
                 <th class="tg-uyni" rowspan="2">Waktu dan Durasi</th>
                 <th class="tg-uyni" rowspan="2">Bukti Kerjasama</th>
             </tr>
+
+            <tr>
+                <td class="tg-uyni">Internasional</td>
+                <td class="tg-uyni">Nasional</td>
+                <td class="tg-uyni">Lokal</td>
+            </tr>
+
             <?php
             $conn = new DB();
             $result = $conn->executeStoredProcedure("SELECT * FROM Kerjasama", []);
@@ -181,7 +188,19 @@ require "../DBConnection.php"
                 $key = $key + 1;
                 echo "<td>" . $key . "</td>";
                 echo "<td>" . $value[1] . "</td>";
-                echo "<td>" . $value[2] . "</td>";
+                if ($value[2] == "Internasional") {
+                    echo "<td>" . $value[2] . "</td>";
+                    echo "<td> - </td>";
+                    echo "<td> - </td>";
+                } else if ($value[2] == "Nasional") {
+                    echo "<td> - </td>";
+                    echo "<td>" . $value[2] . "</td>";
+                    echo "<td> - </td>";
+                } else {
+                    echo "<td> - </td>";
+                    echo "<td> - </td>";
+                    echo "<td>" . $value[2] . "</td>";
+                }
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
                 echo "<td>" . $value[5]->format("Y-m-d") . "</td>";
@@ -190,12 +209,6 @@ require "../DBConnection.php"
                 echo "</tr>";
             }
             ?>
-
-            <tr>
-                <td class="tg-uyni">Internasional</td>
-                <td class="tg-uyni">Nasional</td>
-                <td class="tg-uyni">Lokal</td>
-            </tr>
             <tr>
                 <td class="tg-uyni">1</td>
                 <td class="tg-uyni">2</td>
