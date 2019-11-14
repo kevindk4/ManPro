@@ -184,6 +184,9 @@ require "../DBConnection.php"
             $result = $conn->executeStoredProcedure("SELECT * FROM Kerjasama", []);
 
             foreach ($result as $key => $value) {
+                $date = $value[5];
+                $date->sub($value[6]);
+
                 echo "<tr>";
                 $key = $key + 1;
                 echo "<td>" . $key . "</td>";
@@ -203,7 +206,7 @@ require "../DBConnection.php"
                 }
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
-                echo "<td>" . ($value[5] - $value[6])->format("Y-m-d") . "</td>";
+                echo "<td>" .  $date->format("Y-m-d") . "</td>";
                 echo "<td>" . $value[7] . "</td>";
                 echo "</tr>";
             }
