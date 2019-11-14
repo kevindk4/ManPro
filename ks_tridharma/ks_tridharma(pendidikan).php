@@ -184,8 +184,12 @@ require "../DBConnection.php"
             $result = $conn->executeStoredProcedure("SELECT * FROM Kerjasama", []);
 
             foreach ($result as $key => $value) {
-                $date = $value[5];
-                $date->sub($value[6]);
+                $date1 = $value[5];
+                $date2 = $value[6];
+                $diff = abs(strtotime($date2) - strtotime($date1));
+                $years = floor($diff / (365 * 60 * 60 * 24));
+                $months = floor(($diff - $years * 365 * 60 * 60 * 24) / (30 * 60 * 60 * 24));
+                $days = floor(($diff - $years * 365 * 60 * 60 * 24 - $months * 30 * 60 * 60 * 24) / (60 * 60 * 24));
 
                 echo "<tr>";
                 $key = $key + 1;
@@ -206,7 +210,7 @@ require "../DBConnection.php"
                 }
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
-                echo "<td>" .  $date->format("Y-m-d") . "</td>";
+                echo "<td>" .  $years . $months . $days . "</td>";
                 echo "<td>" . $value[7] . "</td>";
                 echo "</tr>";
             }
