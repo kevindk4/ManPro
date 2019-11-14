@@ -184,8 +184,8 @@ require "../DBConnection.php"
             $result = $conn->executeStoredProcedure("SELECT * FROM Kerjasama", []);
 
             foreach ($result as $key => $value) {
-                $date1 = $value[5];
-                $date2 = $value[6];
+                $date1 = strtotime($value[5]);
+                $date2 = strtotime($value[6]);
                 if ($date1 != null && $date2 != null) {
                     $datediff = $date1 - $date2;
                 } else {
