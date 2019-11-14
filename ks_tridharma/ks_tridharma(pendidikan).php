@@ -174,7 +174,7 @@ require "../DBConnection.php"
             </tr>
             <?php
             $conn = new DB();
-            $result = $conn->executeStoredProcedure("EXEC Tabel 1a_KerjasamaTridharma", []);
+            $result = $conn->executeStoredProcedure("SELECT * FROM Kerjasama", []);
 
             foreach ($result as $key => $value) {
                 echo "<tr>";
