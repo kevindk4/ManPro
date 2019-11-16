@@ -115,14 +115,6 @@
                         echo "<td>".$row[3]."</td>";
                         echo "<td>".$row[4]."</td>";
                         echo "<td>".$row[5]."</td>";
-                        if($row[8]!=""){
-                            echo "<td>".$row[8]."</td>";
-                        }else{
-                            echo "<td>-</td>";
-                        }
-                        echo "<td>".$row[9]."</td>";
-                        echo "<td>".$row[10]."</td>";
-                        echo "<td>".$row[11]."</td>";
                         echo "</tr>";
                     }
                 ?>

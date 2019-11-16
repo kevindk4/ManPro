@@ -60,6 +60,7 @@
                 <a href="#" class="w3-block w3-left-align" onclick="myAccFunc5()">Penelitian <i class="fa fa-caret-down"></i></a>
                 <div class='w3-hide w3-blue w3-card' id='demoAcc5'>
                     <a href="../penelitian/penelitian_mahasiswa.php" class='w3-bar-item' style="color:white">Penelitian yang Melibatkan Mahasiswa</a>
+                    <a href="../penelitian/penelitian_tesis_disertasi.php" class='w3-bar-item' style="color:white">Penelitian yang Menjadi Rujukan Tema Tesis/Disertasi</a>
                 </div>
 
                 <a href="#" class="w3-block w3-left-align" onclick="myAccFunc6()">Pengabdian Kepada Masyarakat <i class="fa fa-caret-down"></i></a>
@@ -96,12 +97,35 @@
         </tr>
         <!-- Tinggal dilengkapin si filenya -->
         <?php
-
+            require_once '../DBConnection.php';
+            $conn = new DB();
+            $hasil = $conn->executeStoredProcedure("EXEC Tabel3b5_KaryaIlmiahDisitasi", []);
+            $i = 1;
+            $jumlahJudul = 0;
+            $jumlahJumlahSitasi = 0;
+            foreach ($hasil as $row) {
+                echo "<tr>";
+                echo "<td>" . $i . "</td>";
+                $i = $i + 1;
+                echo "<td>" . $row[0] . "</td>";
+                echo "<td>" . $row[1] . "</td>";
+                echo "<td>" . $row[2] . "</td>";
+                $jumlahJudul += 1;
+                $jumlahJumlahSitasi += $row[2];
+                echo "</tr>";
+            }
         ?>
         <tr>
             <td colspan="2">Jumlah</td>
-            <td>x</td>
-            <td>x</td>
+            <?php 
+                echo "<td>" . $jumlahJudul . "</td>";
+                echo "<td>" . $jumlahJumlahSitasi . "</td>";
+            ?>
+        </tr>
+        <tr>
+            <td>
+            <!-- Kalau ga ada ini baris Jumlah ketutup sama footer -->
+            <td>
         </tr>
     </table>
     <div class="footer">

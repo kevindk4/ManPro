@@ -95,23 +95,32 @@
                     <th> Judul Kegiata</th>
                     <th> Tahun </th>
                 </tr>   
-                <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>4</th>
-                    <th>5</th>
-                    <th>6</th>
-                </tr>
                 <!-- biaya operasional pendidikan &  kemahasiswaan-->
                 <?php
-                
-                ?>
-                <tr>
-                    <td colspan="5">Jumlah</td>
-                    <td>x</td>
-                </tr>
-            </table>
+                   require_once '../DBConnection.php';
+                   $conn = new DB();
+                   $hasil = $conn->executeStoredProcedure( "EXEC Tabel7_PKMDTPSMahasiswa", []);
+                   $i = 1;
+                   $jumlah = 0;
+                   foreach ($hasil as $row){
+                       echo "<tr>";
+                       echo "<td>".$i."</td>";
+                       $i = $i + 1;
+                       echo "<td>".$row[1]."</td>";
+                       echo "<td>".$row[2]."</td>";
+                       echo "<td>".$row[3]."</td>";
+                       echo "<td>".$row[4]."</td>";
+                       echo "<td>".$row[5]."</td>";
+                   }
+                   $jumlah = $i-1;
+                   ?>
+                   <tr>
+                       <td colspan="5">Jumlah</td>
+                       <?php
+                       echo "<td>".$jumlah."</td>";
+                       ?>
+                   </tr>
+               </table>
         </div>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
