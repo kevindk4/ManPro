@@ -24,14 +24,7 @@
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="../home/home.php">Home</a>
                     <a href="../home/visi_misi.php">Visi dan Misi</a>
-                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc()">
-                        Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
-                    </a>
-                    <div id="demoAcc" class="w3-hide w3-blue w3-card">
-                        <a href="../ks_tridharma/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
-                        <a href="../ks_tridharma/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
-                        <a href="../ks_tridharma/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
-                    </div>  
+                    <a href="../ks_tridharma/ks_tridharma.php">Tata Pamong, Tata Kelola dan Kerja Sama</a>  
 
                     <a  href="#" class="w3-block w3-left-align" onclick="myAccFuncc()">
                         Mahasiswa <i class="fa fa-caret-down"></i>
