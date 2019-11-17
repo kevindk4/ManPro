@@ -112,10 +112,10 @@
             var chart = new CanvasJS.Chart("chartContainer",{
                 animationEnabled: true,
                 title:{
-                    text:"Pie chart modul pendidikan"
+                    text:"Pie chart Integrasi Kegiatan Penelitian Dalam Pembelajaran"
                 },
                 subtitles: [{
-                    text: "test"
+                    text: "Bentuk Integrasi"
                 }],
                 data: [{
                     type:"pie",
