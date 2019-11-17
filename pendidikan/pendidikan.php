@@ -1,5 +1,10 @@
 <?php
     require '../DBConnection.php'
+    $datadummy = array(
+        array("label"=>materi perkuliahan,"y"=> 35.00),
+        array("label"=>studi kasus,"y"=> 50.00),
+        array("label"=>subbab dalam pembelajaran,"y"=> 15.00)
+    )
 ?>
 <!DOCTYPE html>
 <html>
@@ -100,6 +105,28 @@
     <div>
         <h2>Integrasi Kegiatan Penelitian dalam Pembelajaran</h2>
         <br>
+        <script>
+        window.onload = function(){
+            var chart = new CanvasJS.Chart("chartContainer",{
+                animationEnabled: true,
+                title:{
+                    text:"Pie chart modul pendidikan"
+                },
+                subtitles: [{
+                    text: "test"
+                }],
+                data: [{
+                    type:"pie",
+                    yValueFormatString: "#,##0.00\"%\"",
+                    indexLabel : "{label} ({y})",
+                    dataPoints: <?php echo json_encode($datadummy,JSON_NUMERIC_CHECK);?>
+                }]
+            });
+            chart.render();
+            }
+        </script>
+        <div id="chartContainer" style="height:370px;width:100%;"></div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <table>
             <tr>
                 <th>No.</th>
