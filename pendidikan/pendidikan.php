@@ -1,10 +1,11 @@
 <?php
-    require '../DBConnection.php'
+    require '../DBConnection.php';
     $datadummy = array(
-        array("label"=>materi perkuliahan,"y"=> 35.00),
-        array("label"=>studi kasus,"y"=> 50.00),
-        array("label"=>subbab dalam pembelajaran,"y"=> 15.00)
-    )
+        array("label"=>"materi perkuliahan","y"=> 35.00),
+        array("label"=>"studi kasus","y"=> 50.00),
+        array("label"=>"subbab dalam pembelajaran","y"=> 15.00)
+    );
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,7 @@
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
@@ -126,7 +128,6 @@
             }
         </script>
         <div id="chartContainer" style="height:370px;width:100%;"></div>
-        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <table>
             <tr>
                 <th>No.</th>
@@ -136,22 +137,22 @@
                 <th>Bentuk Integrasi</th>
             </tr>
             <?php
-                $conn = new DB();
-                $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM", []);
-                foreach ($result as $key =>$value){
-                    echo "<tr>";
-                    $key = $key+1;
-                    echo "<td>".$key."</td>";
-                    if($value[7] == null){
-                        echo "<td style='width:40%'>-</td>";
-                    }else{
-                        echo "<td style='width:40%'>".$value[7]."</td>";
-                    }
-                    echo "<td>" . $value[3]."</td>";
-                    echo "<td>" . $value[6]."</td>";
-                    echo "<td>" . $value[8]."</td>";
-                    echo "</tr>";
-                }
+                // $conn = new DB();
+                // $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM", []);
+                // foreach ($result as $key =>$value){
+                //     echo "<tr>";
+                //     $key = $key+1;
+                //     echo "<td>".$key."</td>";
+                //     if($value[7] == null){
+                //         echo "<td style='width:40%'>-</td>";
+                //     }else{
+                //         echo "<td style='width:40%'>".$value[7]."</td>";
+                //     }
+                //     echo "<td>" . $value[3]."</td>";
+                //     echo "<td>" . $value[6]."</td>";
+                //     echo "<td>" . $value[8]."</td>";
+                //     echo "</tr>";
+                // }
             ?>
         </table>
     </div>
