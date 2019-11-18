@@ -24,7 +24,14 @@
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="../home/home.php">Home</a>
                     <a href="../home/visi_misi.php">Visi dan Misi</a>
-                    <a href="../ks_tridharma/ks_tridharma.php">Tata Pamong, Tata Kelola dan Kerja Sama</a>
+                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc()">
+                        Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc" class="w3-hide w3-blue w3-card">
+                        <a href="../ks_tridharma/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
+                        <a href="../ks_tridharma/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
+                        <a href="../ks_tridharma/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
+                    </div>
 
                     <a  href="#" class="w3-block w3-left-align" onclick="myAccFuncc()">
                         Mahasiswa <i class="fa fa-caret-down"></i>
@@ -90,7 +97,64 @@
             </div>
         </div>
         <div id="table">
-      
+        <h1></h1>
+        <table>
+            <tr>
+                <th>NPM</th>
+                <th>Nama Mahasiswa</th>
+                <th>Semester</th>
+                <th>IPK</th>
+           
+            </tr>
+            <?php
+              $servername = "10.100.70.70\akreditasi2020";
+              $username = "guestManPro";
+              $password = "Testing123";
+              $dbname = "akreditasi2020";
+              $dbConInfo= array("Database"=>$dbname,"UID"=>$username,"PWD"=>$password);
+            $conn = sqlsrv_connect( $servername, $dbConInfo );
+            if( $conn === false ) {
+                die( print_r( sqlsrv_errors(), true));
+            }
+            
+            $sql = "SELECT [NPM]
+             ,[Nama]
+             ,[Semester],[IPK]
+            FROM [Akreditasi2020].[dbo].[Kelulusan_TD]";
+            $stmt = sqlsrv_query( $conn, $sql );
+            if( $stmt === false) {
+                die( print_r( sqlsrv_errors(), true) );
+            }
+            
+            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+                            echo "<tr>";
+               echo "<td>".$row['NPM']."</td>";
+                echo "<td>".$row['Nama']."</td>";
+                echo "<td>".$row['Semester']."</td>";
+                 echo "<td>".$row['IPK']."</td>";
+                echo "</tr>";
+            }
+            
+            sqlsrv_free_stmt( $stmt);
+            
+//             require_once '../DBConnection.php';
+//             $conn = new DB();
+            
+// $tsql = "SELECT TOP (10) [NPM]
+// ,[Nama]
+// ,[Semester],[IPK]
+// FROM [Akreditasi2020].[dbo].[Kelulusan_TD]"; 
+// $stmt = sqlsrv_query( $conn, $tsql);     
+//         while ($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)){
+//                 echo "<tr>";
+//                 echo "<td>".$row['NPM']."</td>";
+//                 echo "<td>".$row['Nama']."</td>";
+//                 echo "<td>".$row['Semester']."</td>";
+//                 echo "<td>".$row['IPK']."</td>";
+//                 echo "</tr>";
+//             }
+            ?>
+            </table>
     </div>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>

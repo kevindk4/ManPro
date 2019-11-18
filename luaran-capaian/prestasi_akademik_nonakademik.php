@@ -24,7 +24,14 @@
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="../home/home.php">Home</a>
                     <a href="../home/visi_misi.php">Visi dan Misi</a>
-                    <a href="../ks_tridharma/ks_tridharma.php">Tata Pamong, Tata Kelola dan Kerja Sama</a>
+                    <a href="#" class="w3-block w3-left-align" onclick="myAccFunc()">
+                        Tata Pamong, Tata Kelola dan Kerja Sama <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc" class="w3-hide w3-blue w3-card">
+                        <a href="../ks_tridharma/ks_tridharma(pendidikan).php" class="w3-bar-item" style="color: white">Kerjasama Tridharma(Pendidikan)</a><br>
+                        <a href="../ks_tridharma/ks_tridharma(penelitian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Penelitian)</a><br>
+                        <a href="../ks_tridharma/ks_tridharma(Pengabdian).php" class="w3-bar-item" style="color: white;">Kerjasama Tridharma(Pengabdian kepada Masyarakat)</a>
+                    </div>
 
                     <a  href="#" class="w3-block w3-left-align" onclick="myAccFuncc()">
                         Mahasiswa <i class="fa fa-caret-down"></i>
@@ -72,7 +79,6 @@
                         <a href="luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
                         <a href="capaian_pembelajaran.php" class='w3-bar-item' style="color:white">Capaian Pembelajaran</a>
                         <a href="prestasi_akademik_nonakademik.php" class='w3-bar-item' style="color:white">Prestasi Akademik dan Non-Akademik</a>
-
                         <a href="luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
                     </div>
                 </div>
@@ -90,7 +96,97 @@
             </div>
         </div>
         <div id="table">
-      
+        <h1>PRESTASI AKADEMIK</h1>
+        <table>
+            <tr>
+            <th>Kegiatan </th>
+                <th>Tahun</th>
+                <th>Tingkat</th>
+                <th>Prestasi</th>
+            </tr>
+            <?php
+              $servername = "10.100.70.70\akreditasi2020";
+              $username = "guestManPro";
+              $password = "Testing123";
+              $dbname = "akreditasi2020";
+              $dbConInfo= array("Database"=>$dbname,"UID"=>$username,"PWD"=>$password);
+            $conn = sqlsrv_connect( $servername, $dbConInfo );
+            if( $conn === false ) {
+                die( print_r( sqlsrv_errors(), true));
+            }
+            
+            $sql = "SELECT TOP (1000) [Kegiatan]
+            ,[Tahun]
+            ,[Tingkat]
+            ,[Prestasi]
+        
+        FROM [Akreditasi2020].[dbo].[v_8b1]";
+            $stmt = sqlsrv_query( $conn, $sql );
+            if( $stmt === false) {
+                die( print_r( sqlsrv_errors(), true) );
+            }
+            
+            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+                            echo "<tr>";
+                            echo "<td>".$row['Kegiatan']."</td>";
+
+               echo "<td>".$row['Tahun']."</td>";
+                echo "<td>".$row['Tingkat']."</td>";
+                echo "<td>".$row['Prestasi']."</td>";
+                echo "</tr>";
+            }
+            
+            sqlsrv_free_stmt( $stmt);
+            
+
+            ?>
+            </table>
+    </div>
+    <div id="table">
+        <h1>PRESTASI NON-AKADEMIK</h1>
+        <table>
+            <tr>
+            <th>Tahun</th>
+                <th>Tingkat</th>
+                <th>Prestasi</th>
+            </tr>
+            <?php
+              $servername = "10.100.70.70\akreditasi2020";
+              $username = "guestManPro";
+              $password = "Testing123";
+              $dbname = "akreditasi2020";
+              $dbConInfo= array("Database"=>$dbname,"UID"=>$username,"PWD"=>$password);
+            $conn = sqlsrv_connect( $servername, $dbConInfo );
+            if( $conn === false ) {
+                die( print_r( sqlsrv_errors(), true));
+            }
+            
+            $sql = "SELECT TOP (1000) [Kegiatan]
+            ,[Tahun]
+            ,[Tingkat]
+            ,[Prestasi]
+            ,[Akademik]
+        FROM [Akreditasi2020].[dbo].[v_8b2]";
+            $stmt = sqlsrv_query( $conn, $sql );
+            if( $stmt === false) {
+                die( print_r( sqlsrv_errors(), true) );
+            }
+            
+            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+                            echo "<tr>";
+                            echo "<td>".$row['Kegiatan']."</td>";
+
+               echo "<td>".$row['Tahun']."</td>";
+                echo "<td>".$row['Tingkat']."</td>";
+                echo "<td>".$row['Prestasi']."</td>";
+                echo "</tr>";
+            }
+            
+            sqlsrv_free_stmt( $stmt);
+            
+
+            ?>
+            </table>
     </div>
         <div class="footer">
             <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
