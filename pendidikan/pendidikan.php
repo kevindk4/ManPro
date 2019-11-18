@@ -1,11 +1,26 @@
 <?php
     require '../DBConnection.php';
-    $datadummy = array(
-        array("label"=>"materi perkuliahan","y"=> 35.00),
-        array("label"=>"studi kasus","y"=> 50.00),
-        array("label"=>"subbab dalam pembelajaran","y"=> 15.00)
-    );
+    $conn = new DB();
     
+    $queryForChart = 
+    "CREATE TABLE #temp(col1 int,col2 text,col3 text,col4 text,col5 int,col6 int,col7 text,col8 text,col9 text);
+    Insert into #temp(col1,col2,col3,col4,col5,col6,col7,col8,col9) EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM;
+    SELECT * FROM
+    (SELECT COUNT(*)AS 'MATERI PEMBELAJARAN COUNT' FROM #temp WHERE col9 LIKE '%Materi Pembelajaran%')t CROSS JOIN 
+    (SELECT COUNT(*)AS 'TOPIK PENELITIAN COUNT' FROM #temp WHERE col9 LIKE '%Topik Penelitian%')a cross join
+    (SELECT COUNT(*)AS 'STUDI KASUS COUNT' FROM #temp WHERE col9 LIKE '%Studi Kasus%')b;"; 
+  
+
+    $chartResult = $conn->executeStoredProcedure($queryForChart,[]);
+    $divider=0;
+    foreach($chartResult[0] as $key =>$value){
+        $divider += $value;
+    }
+    $datadummy = array(
+        array("label"=>"Materi Pembelajaran","y"=> ($chartResult[0][0]/$divider) * 100),
+        array("label"=>"Topik Penelitian","y"=> ($chartResult[0][1]/$divider) * 100),
+        array("label"=>"Studi Kasus","y"=> ($chartResult[0][2]/$divider) * 100)
+    );   
 ?>
 <!DOCTYPE html>
 <html>
@@ -137,22 +152,22 @@
                 <th>Bentuk Integrasi</th>
             </tr>
             <?php
-                // $conn = new DB();
-                // $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM", []);
-                // foreach ($result as $key =>$value){
-                //     echo "<tr>";
-                //     $key = $key+1;
-                //     echo "<td>".$key."</td>";
-                //     if($value[7] == null){
-                //         echo "<td style='width:40%'>-</td>";
-                //     }else{
-                //         echo "<td style='width:40%'>".$value[7]."</td>";
-                //     }
-                //     echo "<td>" . $value[3]."</td>";
-                //     echo "<td>" . $value[6]."</td>";
-                //     echo "<td>" . $value[8]."</td>";
-                //     echo "</tr>";
-                // }
+                
+                $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM",[]);
+                foreach ($result as $key =>$value){
+                    echo "<tr>";
+                    $key = $key+1;
+                    echo "<td>".$key."</td>";
+                    if($value[7] == null){
+                        echo "<td style='width:40%'>-</td>";
+                    }else{
+                        echo "<td style='width:40%'>".$value[7]."</td>";
+                    }
+                    echo "<td>" . $value[3]."</td>";
+                    echo "<td>" . $value[6]."</td>";
+                    echo "<td>" . $value[8]."</td>";
+                    echo "</tr>";
+                }
             ?>
         </table>
     </div>
