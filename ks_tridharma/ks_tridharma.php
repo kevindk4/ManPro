@@ -120,13 +120,13 @@ require "../DBConnection.php"
             $result = $conn->executeStoredProcedure("SELECT * FROM Kerjasama", []);
 
             foreach ($result as $key => $value) {
-                // $date1 = strtotime($value[5]->toString("yyyyMMddHHmmss"));
-                // $date2 = strtotime($value[6]->toString("yyyyMMddHHmmss"));
-                // if ($date1 != null && $date2 != null) {
-                //     $datediff = $date1 - $date2;
-                // } else {
-                //     $interval = null;
-                // }
+                $null = false;
+                $interval = null;
+                if ($value[5] == null || $value[6] == null) {
+                    $null = true;
+                } else {
+                    $interval = $value[5]->diff($value[6]);
+                }
 
                 echo "<tr>";
                 $key = $key + 1;
@@ -150,11 +150,11 @@ require "../DBConnection.php"
                 }
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
-                // if ($interval != null) {
-                //    echo "<td>" .  round($datediff / (60 * 60 * 24)) . "hari </td>";
-                // } else {
-                echo "<td> 0 hari </td>";
-                // }
+                if ($interval != null) {
+                    echo "<td> not null </td>";
+                } else {
+                    echo "<td> Tidak ada informasi </td>";
+                }
                 echo "<td>" . $value[7] . "</td>";
                 echo "</tr>";
             }
