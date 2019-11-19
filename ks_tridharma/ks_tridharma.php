@@ -113,57 +113,62 @@ require "../DBConnection.php"
             </tr>
 
             <?php
-            $dataPoints = array(
-                array("label" => "Chrome", "y" => 64.02),
-                array("label" => "Firefox", "y" => 12.55),
-                array("label" => "IE", "y" => 8.47),
-                array("label" => "Safari", "y" => 6.08),
-                array("label" => "Edge", "y" => 4.29),
-                array("label" => "Others", "y" => 4.59)
-            );
-
+            $internasional = 0;
+            $nasional = 0;
+            $lokal = 0;
             $conn = new DB();
             $result = $conn->executeStoredProcedure("SELECT * FROM Kerjasama", []);
 
             foreach ($result as $key => $value) {
-                $date1 = strtotime($value[5]->toString("yyyyMMddHHmmss"));
-                $date2 = strtotime($value[6]->toString("yyyyMMddHHmmss"));
-                if ($date1 != null && $date2 != null) {
-                    $datediff = $date1 - $date2;
-                } else {
-                    $interval = null;
-                }
+                // $date1 = strtotime($value[5]->toString("yyyyMMddHHmmss"));
+                // $date2 = strtotime($value[6]->toString("yyyyMMddHHmmss"));
+                // if ($date1 != null && $date2 != null) {
+                //     $datediff = $date1 - $date2;
+                // } else {
+                //     $interval = null;
+                // }
 
                 echo "<tr>";
                 $key = $key + 1;
                 echo "<td>" . $key . "</td>";
                 echo "<td>" . $value[1] . "</td>";
                 if ($value[2] == "Internasional") {
+                    $internasional = $internasional + 1;
                     echo "<td>" . $value[2] . "</td>";
                     echo "<td> - </td>";
                     echo "<td> - </td>";
                 } else if ($value[2] == "Nasional") {
+                    $nasional = $nasional + 1;
                     echo "<td> - </td>";
                     echo "<td>" . $value[2] . "</td>";
                     echo "<td> - </td>";
                 } else {
+                    $lokal = $lokal + 1;
                     echo "<td> - </td>";
                     echo "<td> - </td>";
                     echo "<td>" . $value[2] . "</td>";
                 }
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
-                if ($interval != null) {
-                    echo "<td>" .  round($datediff / (60 * 60 * 24)) . "hari </td>";
-                } else {
-                    echo "<td> 0 hari </td>";
-                }
+                // if ($interval != null) {
+                //    echo "<td>" .  round($datediff / (60 * 60 * 24)) . "hari </td>";
+                // } else {
+                echo "<td> 0 hari </td>";
+                // }
                 echo "<td>" . $value[7] . "</td>";
                 echo "</tr>";
             }
+
+            $dataPoints = array(
+                array("label" => "Internasional", "y" => $internasional),
+                array("label" => "Nasional", "y" => $nasional),
+                array("label" => "Lokal", "y" => $lokal)
+            );
             ?>
         </table>
     </div>
+
+    <br>
 
     <div id="chartContainer" style="height: 370px; width: 100%;"></div>
     <div class="footer">
@@ -171,12 +176,13 @@ require "../DBConnection.php"
     </div>
 </body>
 <script type="text/javascript" src="../script/script.js"></script>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js">
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
     window.onload = function() {
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title: {
-                text: "Usage Share of Desktop Browsers"
+                text: "Kerjasama Tridharma"
             },
             data: [{
                 type: "pie",
@@ -186,7 +192,6 @@ require "../DBConnection.php"
             }]
         });
         chart.render();
-
     }
 </script>
 
