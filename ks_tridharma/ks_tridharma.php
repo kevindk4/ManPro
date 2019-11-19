@@ -94,7 +94,7 @@ require "../DBConnection.php"
         </div>
     </div>
     <div>
-    
+
         <table class="tg">
             <tr>
                 <th class="tg-uyni" rowspan="2">No</th>
@@ -113,16 +113,19 @@ require "../DBConnection.php"
             </tr>
 
             <?php
+            $internasional = 0;
+            $nasional = 0;
+            $lokal = 0;
             $conn = new DB();
             $result = $conn->executeStoredProcedure("SELECT * FROM Kerjasama", []);
 
             foreach ($result as $key => $value) {
-                $date1 = strtotime($value[5]->toString("yyyyMMddHHmmss"));
-                $date2 = strtotime($value[6]->toString("yyyyMMddHHmmss"));
-                if ($date1 != null && $date2 != null) {
-                    $datediff = $date1 - $date2;
+                $null = false;
+                $interval = null;
+                if ($value[5] == null || $value[6] == null) {
+                    $null = true;
                 } else {
-                    $interval = null;
+                    $interval = date_diff($value[6], $value[5]);
                 }
 
                 echo "<tr>";
@@ -130,14 +133,17 @@ require "../DBConnection.php"
                 echo "<td>" . $key . "</td>";
                 echo "<td>" . $value[1] . "</td>";
                 if ($value[2] == "Internasional") {
+                    $internasional = $internasional + 1;
                     echo "<td>" . $value[2] . "</td>";
                     echo "<td> - </td>";
                     echo "<td> - </td>";
                 } else if ($value[2] == "Nasional") {
+                    $nasional = $nasional + 1;
                     echo "<td> - </td>";
                     echo "<td>" . $value[2] . "</td>";
                     echo "<td> - </td>";
                 } else {
+                    $lokal = $lokal + 1;
                     echo "<td> - </td>";
                     echo "<td> - </td>";
                     echo "<td>" . $value[2] . "</td>";
@@ -145,206 +151,48 @@ require "../DBConnection.php"
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
                 if ($interval != null) {
-                    echo "<td>" .  round($datediff / (60 * 60 * 24)) . "hari </td>";
+                    echo "<td> " . $interval->days . " hari </td>";
                 } else {
-                    echo "<td> 0 hari </td>";
+                    echo "<td> Tidak ada informasi </td>";
                 }
                 echo "<td>" . $value[7] . "</td>";
                 echo "</tr>";
             }
+
+            $dataPoints = array(
+                array("label" => "Internasional", "y" => $internasional),
+                array("label" => "Nasional", "y" => $nasional),
+                array("label" => "Lokal", "y" => $lokal)
+            );
             ?>
-            <tr>
-                <td class="tg-uyni">1</td>
-                <td class="tg-uyni">2</td>
-                <td class="tg-uyni">3</td>
-                <td class="tg-uyni">4</td>
-                <td class="tg-uyni">5</td>
-                <td class="tg-uyni">6</td>
-                <td class="tg-uyni">7</td>
-                <td class="tg-uyni">8</td>
-                <td class="tg-uyni">9</td>
-            </tr>
-            <tr>
-                <td class="tg-lboi" colspan="9">Pendidikan</td>
-            </tr>
-            <tr>
-                <td class="tg-9wq8">1</td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-            </tr>
-            <tr>
-                <td class="tg-9wq8">2</td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-            </tr>
-            <tr>
-                <td class="tg-9wq8">3</td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-            </tr>
-            <tr>
-                <td class="tg-9wq8">4</td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">5</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-cly1" colspan="9">Penelitian</td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">1</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">2</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">3</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">4</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">5</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-0lax" colspan="9">Pengabdian Kepada Masyarakat</td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">1</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">2</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">3</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">4</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-            </tr>
-            <tr>
-                <td class="tg-nrix">5</td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <td class="tg-nrix"></td>
-                <!--dio antares-->
-            </tr>
         </table>
     </div>
+
+    <br>
+
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
     <div class="footer">
         <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
     </div>
 </body>
 <script type="text/javascript" src="../script/script.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+    window.onload = function() {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title: {
+                text: "Kerjasama Tridharma"
+            },
+            data: [{
+                type: "pie",
+                yValueFormatString: "#,##0.00\"%\"",
+                indexLabel: "{label} ({y})",
+                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+            }]
+        });
+        chart.render();
+    }
+</script>
 
 </html>
