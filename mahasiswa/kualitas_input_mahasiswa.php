@@ -30,8 +30,8 @@
                         Mahasiswa <i class="fa fa-caret-down"></i>
                     </a>
                     <div id="demoAccc" class="w3-hide w3-blue w3-card">
-                        <a href="kualitas_input_mahasiswa.php" class="w3-bar-item" style="color: white">Kualitas Input Mahasiswa</a><br>
-                        <a href="mahasiswa_asing.php" class="w3-bar-item" style="color: white">Mahasiswa Asing</a>
+                        <a href="../mahasiswa/kualitas_input_mahasiswa.php" class="w3-bar-item" style="color: white">Kualitas Input Mahasiswa</a><br>
+                        <a href="../mahasiswa/mahasiswa_asing.php" class="w3-bar-item" style="color: white">Mahasiswa Asing</a>
                     </div>                                            
                     <a href="#" class="w3-block w3-left-align" onclick="myAccFunc2()">Sumber Daya Manusia <i class="fa fa-caret-down"></i></a>
                     <div class="w3-hide w3-blue w3-card" id="demoAcc2">
@@ -72,6 +72,9 @@
                         <a href="../luaran-capaian/luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
                         <a href="../luaran-capaian/luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
                     </div>
+
+                    <a href="../about/about.php">About US</a>
+
                 </div>
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>
@@ -87,57 +90,6 @@
             </div>
         </div>
         <div>
-        <style type="text/css">
-        .tg  {
-            border-collapse:collapse;border-spacing:0;
-        }
-        .tg td{
-            font-family:Arial, sans-serif;
-            font-size:14px;
-            padding:10px 5px;
-            border-style:solid;
-            border-width:1px;
-            overflow:hidden;
-            word-break:normal;
-            border-color:black;
-        }
-        .tg th{
-            font-family:Arial, sans-serif;
-            font-size:14px;
-            font-weight:normal;
-            padding:10px 5px;
-            border-style:solid;
-            border-width:1px;
-            overflow:hidden;
-            word-break:normal;
-            border-color:black;}
-        .tg .tg-cly1{
-            text-align:left;
-            vertical-align:middle
-        }
-        .tg .tg-lboi{
-            border-color:inherit;
-            text-align:left;
-            vertical-align:middle
-        }
-        .tg .tg-9wq8{border-color:inherit;
-            text-align:center;
-            vertical-align:middle
-        }
-        .tg .tg-uyni{background-color:#c0c0c0;
-            color:#000000;border-color:inherit;
-            text-align:center;
-            vertical-align:middle
-        }
-        .tg .tg-nrix{
-            text-align:center;
-            vertical-align:middle
-        }
-        .tg .tg-0lax{
-            text-align:left;
-            vertical-align:top
-        }     
-        </style>
             <table class="tg">
             <tr>
                 <th class="tg-uyni" rowspan="2">Tahun Akademik</th>

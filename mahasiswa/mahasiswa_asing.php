@@ -30,8 +30,8 @@
                         Mahasiswa <i class="fa fa-caret-down"></i>
                     </a>
                     <div id="demoAccc" class="w3-hide w3-blue w3-card">
-                        <a href="kualitas_input_mahasiswa.php" class="w3-bar-item" style="color: white">Kualitas Input Mahasiswa</a><br>
-                        <a href="mahasiswa_asing.php" class="w3-bar-item" style="color: white">Mahasiswa Asing</a>
+                        <a href="../mahasiswa/kualitas_input_mahasiswa.php" class="w3-bar-item" style="color: white">Kualitas Input Mahasiswa</a><br>
+                        <a href="../mahasiswa/mahasiswa_asing.php" class="w3-bar-item" style="color: white">Mahasiswa Asing</a>
                     </div>                                            
                     <a href="#" class="w3-block w3-left-align" onclick="myAccFunc2()">Sumber Daya Manusia <i class="fa fa-caret-down"></i></a>
                     <div class="w3-hide w3-blue w3-card" id="demoAcc2">
@@ -72,6 +72,9 @@
                         <a href="../luaran-capaian/luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
                         <a href="../luaran-capaian/luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
                     </div>
+
+                    <a href="../about/about.php">About US</a>
+
                 </div>
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>

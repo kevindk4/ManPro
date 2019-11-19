@@ -114,49 +114,177 @@
                             <img src="../image/img3.jpeg" style="width:100%">
                         </div>
             </div>
-
-            <div>
-                    <h1>Profil</h1>
-
-                    
-                <p> Sejak didirikan pada tahun 1996, Program Studi Teknik Informatika UNPAR 
-                    telah menghasilkan lulusan yang bekerja sebagai pengembang perangkat lunak 
-                    dan sistem informasi di berbagai bidang dan industri, mulai dari 
-                    perusahaan-perusahaan e-commerce, bank, perusahaan ritel, dan BUMN. 
-                    Tak sedikit pula lulusan Informatika UNPAR yang menjadi teknopreneur 
-                    di bidang teknologi informasi. Sebagian lulusan juga melanjutkan studi 
-                    ke jenjang magister/master maupun doktor, baik di dalam negeri maupun 
-                    di luar negeri seperti di Belanda, Singapura, Inggris, Kanada dan Australia.
-                    </p>
-
-
-                    <p> Secara umum, visi dan misi dari Program Studi Teknik Informatika UNPAR 
-                    berfokus pada kemampuan akademik, kemampuan berpikir kreatif dan inovatif, 
-                    serta soft skill dan profesionalisme yang tinggi. Informasi detail mengenai 
-                    visi dan misi program studi kami dapat dilihat pada laman visi dan misi. 
-                    </p>
-
-
-                    <p> Mulai tahun 2019, Program Studi Teknik Informatika membuka dua program 
-                    yaitu Program Data Science dan Program Computing Science. Teknik Informatika 
-                    UNPAR merupakan salah satu jurusan pertama di Indonesia yang membuka program 
-                    Data Science. Informasi lebih lengkap mengenai kedua program tersebut dapat 
-                    dilihat pada laman program-program tersebut.
-                    </p>
-
-
-                    <p>Kurikulum Program Studi Teknik Informatika berfokus pada penguasaan konsep 
-                    penyelesaian masalah serta pengimplementasian solusi masalah tersebut dalam 
-                    bentuk perangkat lunak. Daftar mata kuliah wajib pada kurikulum Program Studi 
-                    Teknik Informatika dapat dilihat pada laman mata kuliah wajib. Daftar mata kuliah 
-                    pilihan pada kurikulum kami dapat dilihat pada laman Program Computing Science dan 
-                    laman Program Data Science.
-                    </p>
-                    <br><br>
-
+            <br>
+            <div style="text-align:center;">
+                 <h1>Tim Besar II</h1> 
             </div>
+            <h3>Ketua (PM): Kevin Draven</h3>
+            <br>
+
+            <table class="tg">
+            <tr>
+                <th class="tg-uyni" rowspan="2">No.</th>
+                <th class="tg-uyni" rowspan="2">Modul</th>
+                <th class="tg-uyni" rowspan="2">Jumlah Tim</th>
+                <th class="tg-uyni" colspan="2">Tim</th>
+                <th class="tg-uyni" rowspan="2">Ketua Tim</th>
+                <th class="tg-uyni" rowspan="2">Ketua</th>
+            </tr>
+
+            <tr>
+                <th class="tg-uyni" >Nama</th>
+                <th class="tg-uyni" >NPM</th>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8" rowspan="4">1.</td>
+                <td class="tg-9wq8" rowspan="4">Halaman utama/home(Termasuk menu-menu),<br>
+                Visi-Misi,<br>
+                Tata Pamong, Tata Kelola, dan Kerjasama,<br>
+                Mahasiswa</td>
+                <td class="tg-9wq8" rowspan="4">1</td>
+                <td class="tg-9wq8">Kelvin Adrian</td>
+                <td class="tg-9wq8">2017730043</td>
+                <td class="tg-9wq8" rowspan="4">Kelvin Adrian</td>
+                <td class="tg-9wq8" rowspan="4">Kelvin Adrian</td>
+            </tr>
 
 
+            <tr>
+                <td class="tg-9wq8">William Oktavianus</td>
+                <td class="tg-9wq8">2017730010</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Yosef Panji Pangestu</td>
+                <td class="tg-9wq8">2017730074</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Dio Antares</td>
+                <td class="tg-9wq8">2017730003</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8" rowspan="7">2.</td>
+                <td class="tg-9wq8" rowspan="7">Sumber Daya Manusia, <br>
+                 Keuangan, Sarana Dan Prasarana’ Penelitian, <br>
+                 Pengabdian Kepada Masyarakat</td>
+                <td class="tg-9wq8" rowspan="3">1</td>
+                <td class="tg-9wq8">David</td>
+                <td class="tg-9wq8">2017730015</td>
+                <td class="tg-9wq8" rowspan="3">David</td>
+                <td class="tg-9wq8" rowspan="7">Wang</td>
+            </tr>
+
+
+            <tr>
+                <td class="tg-9wq8">Wang</td>
+                <td class="tg-9wq8">2017730025</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Nicholas</td>
+                <td class="tg-9wq8">2017730018</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8" rowspan="4">1</td>
+                <td class="tg-9wq8">Kelvin Dravin</td>
+                <td class="tg-9wq8">2017730022</td>
+                <td class="tg-9wq8" rowspan="4">Henrico Leodra</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Kelvin Draven</td>
+                <td class="tg-9wq8">2017730023</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Jodi Tanato</td>
+                <td class="tg-9wq8">2017730037</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Henrico Leodra</td>
+                <td class="tg-9wq8">2017730038</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8" rowspan="4">3.</td>
+                <td class="tg-9wq8" rowspan="4">Pendidikan</td>
+                <td class="tg-9wq8" rowspan="4">1</td>
+                <td class="tg-9wq8">Stephen Hadi</td>
+                <td class="tg-9wq8">2017730016</td>
+                <td class="tg-9wq8" rowspan="4">Stephen Hadi</td>
+                <td class="tg-9wq8" rowspan="4">Stephen Hadi</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Edwin Pranajaya</td>
+                <td class="tg-9wq8">2017730027</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Cristopher William</td>
+                <td class="tg-9wq8">2017730034</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Joseph Cliff</td>
+                <td class="tg-9wq8">2017730046</td>
+            </tr>
+
+
+            <tr>
+                <td class="tg-9wq8" rowspan="8">4.</td>
+                <td class="tg-9wq8" rowspan="8">Luaran Dan Capaian Tridharma</td>
+                <td class="tg-9wq8" rowspan="4">1</td>
+                <td class="tg-9wq8">Vinson Tandra</td>
+                <td class="tg-9wq8">2016730042</td>
+                <td class="tg-9wq8" rowspan="4">Muhamad Rizky</td>
+                <td class="tg-9wq8" rowspan="8">Reynaldi Rahadian</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Giovanni Anggasta</td>
+                <td class="tg-9wq8">2016730049</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Laras Octa</td>
+                <td class="tg-9wq8">2016730052</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Muhamad Rizky</td>
+                <td class="tg-9wq8">2016730085</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8" rowspan="4">1</td>
+                <td class="tg-9wq8">Thomas Christian</td>
+                <td class="tg-9wq8">2016730027</td>
+                <td class="tg-9wq8" rowspan="4">Reynaldi Rahadian</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Reynaldi Rahadian</td>
+                <td class="tg-9wq8">2016730028</td>
+            </tr>
+
+            <tr>
+                <td class="tg-9wq8">Naufal Muhammad</td>
+                <td class="tg-9wq8">2016730033</td>
+            </tr>
+            
+            <tr>
+                <td class="tg-9wq8">Muharodan Sidik</td>
+                <td class="tg-9wq8">2016730089</td>
+            </tr>
+
+            </table>
+            <br><br>
 
             <div class="footer">
                 <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>

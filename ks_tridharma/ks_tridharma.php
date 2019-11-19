@@ -29,7 +29,7 @@ require "../DBConnection.php"
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="../home/home.php">Home</a>
                 <a href="../home/visi_misi.php">Visi dan Misi</a>
-                <a href="ks_tridharma.php">Tata Pamong, Tata Kelola dan Kerja Sama</a>
+                <a href="../ks_tridharma/ks_tridharma.php">Tata Pamong, Tata Kelola dan Kerja Sama</a>
 
                 <a href="#" class="w3-block w3-left-align" onclick="myAccFuncc()">
                     Mahasiswa <i class="fa fa-caret-down"></i>
@@ -76,6 +76,9 @@ require "../DBConnection.php"
                     <a href="../luaran-capaian/luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
                     <a href="../luaran-capaian/luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
                 </div>
+
+                <a href="../about/about.php">About US</a>
+
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         </div>
@@ -91,70 +94,7 @@ require "../DBConnection.php"
         </div>
     </div>
     <div>
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-
-            .tg td {
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                padding: 10px 5px;
-                border-style: solid;
-                border-width: 1px;
-                overflow: hidden;
-                word-break: normal;
-                border-color: black;
-            }
-
-            .tg th {
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                padding: 10px 5px;
-                border-style: solid;
-                border-width: 1px;
-                overflow: hidden;
-                word-break: normal;
-                border-color: black;
-            }
-
-            .tg .tg-cly1 {
-                text-align: left;
-                vertical-align: middle
-            }
-
-            .tg .tg-lboi {
-                border-color: inherit;
-                text-align: left;
-                vertical-align: middle
-            }
-
-            .tg .tg-9wq8 {
-                border-color: inherit;
-                text-align: center;
-                vertical-align: middle
-            }
-
-            .tg .tg-uyni {
-                background-color: #c0c0c0;
-                color: #000000;
-                border-color: inherit;
-                text-align: center;
-                vertical-align: middle
-            }
-
-            .tg .tg-nrix {
-                text-align: center;
-                vertical-align: middle
-            }
-
-            .tg .tg-0lax {
-                text-align: left;
-                vertical-align: top
-            }
-        </style>
+    
         <table class="tg">
             <tr>
                 <th class="tg-uyni" rowspan="2">No</th>

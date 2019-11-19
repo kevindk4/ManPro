@@ -75,6 +75,9 @@
 
                         <a href="luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
                     </div>
+
+                    <a href="../about/about.php">About US</a>
+
                 </div>
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>

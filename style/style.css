@@ -80,3 +80,102 @@ th,td{
 	text-align:center;
 	padding:15px;
 }
+
+
+
+/*Slide Show*/
+
+
+.images{
+	position:relative;
+	float:left;
+	width:110%;
+}
+
+.carousel-container{
+	position: relative;
+	margin: auto;
+	border-bottom: solid skyblue;
+	height:500px;
+	overflow:hidden;
+}
+
+.numbertext{
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+.slides{
+	animation-name: slides;
+	animation-duration: 8s;
+}
+
+@keyframes slides{
+	0%{left:100%}
+	40%{left:0}
+	60%{left:0}
+	100%{left:-100%}
+}
+
+
+
+
+/*table*/
+
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+.tg td{
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:black;
+}
+.tg th{
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:black;
+}
+.tg .tg-cly1{
+	text-align:left;
+	vertical-align:middle
+}
+.tg .tg-lboi{
+	border-color:inherit;
+	text-align:left;
+	vertical-align:middle
+}
+.tg .tg-9wq8{
+	border-color:inherit;
+	text-align:center;
+	vertical-align:middle
+}
+.tg .tg-uyni{
+	background-color:#c0c0c0;
+	color:#000000;border-color:inherit;
+	text-align:center;
+	vertical-align:middle
+}
+.tg .tg-nrix{
+	text-align:center;
+	vertical-align:middle
+}
+.tg .tg-0lax{
+	text-align:left;
+	vertical-align:top
+}     
+
+
