@@ -1,5 +1,26 @@
 <?php
-    require '../DBConnection.php'
+    require '../DBConnection.php';
+    $conn = new DB();
+    
+    $queryForChart = 
+    "CREATE TABLE #temp(col1 int,col2 text,col3 text,col4 text,col5 int,col6 int,col7 text,col8 text,col9 text);
+    Insert into #temp(col1,col2,col3,col4,col5,col6,col7,col8,col9) EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM;
+    SELECT * FROM
+    (SELECT COUNT(*)AS 'MATERI PEMBELAJARAN COUNT' FROM #temp WHERE col9 LIKE '%Materi Pembelajaran%')t CROSS JOIN 
+    (SELECT COUNT(*)AS 'TOPIK PENELITIAN COUNT' FROM #temp WHERE col9 LIKE '%Topik Penelitian%')a cross join
+    (SELECT COUNT(*)AS 'STUDI KASUS COUNT' FROM #temp WHERE col9 LIKE '%Studi Kasus%')b;"; 
+  
+
+    $chartResult = $conn->executeStoredProcedure($queryForChart,[]);
+    $divider=0;
+    foreach($chartResult[0] as $key =>$value){
+        $divider += $value;
+    }
+    $datadummy = array(
+        array("label"=>"Materi Pembelajaran","y"=> ($chartResult[0][0]/$divider) * 100),
+        array("label"=>"Topik Penelitian","y"=> ($chartResult[0][1]/$divider) * 100),
+        array("label"=>"Studi Kasus","y"=> ($chartResult[0][2]/$divider) * 100)
+    );   
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,6 +28,7 @@
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
@@ -94,6 +116,27 @@
     <div>
         <h2>Integrasi Kegiatan Penelitian dalam Pembelajaran</h2>
         <br>
+        <script>
+        window.onload = function(){
+            var chart = new CanvasJS.Chart("chartContainer",{
+                animationEnabled: true,
+                title:{
+                    text:"Pie chart Integrasi Kegiatan Penelitian Dalam Pembelajaran"
+                },
+                subtitles: [{
+                    text: "Bentuk Integrasi"
+                }],
+                data: [{
+                    type:"pie",
+                    yValueFormatString: "#,##0.00\"%\"",
+                    indexLabel : "{label} ({y})",
+                    dataPoints: <?php echo json_encode($datadummy,JSON_NUMERIC_CHECK);?>
+                }]
+            });
+            chart.render();
+            }
+        </script>
+        <div id="chartContainer" style="height:370px;width:100%;"></div>
         <table>
             <tr>
                 <th>No.</th>
@@ -103,8 +146,8 @@
                 <th>Bentuk Integrasi</th>
             </tr>
             <?php
-                $conn = new DB();
-                $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM", []);
+                
+                $result = $conn->executeStoredProcedure("EXEC Tabel5b_IntegrasiKegiatanPenelitianPkM",[]);
                 foreach ($result as $key =>$value){
                     echo "<tr>";
                     $key = $key+1;
