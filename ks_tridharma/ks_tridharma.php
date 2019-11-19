@@ -125,7 +125,7 @@ require "../DBConnection.php"
                 if ($value[5] == null || $value[6] == null) {
                     $null = true;
                 } else {
-                    $interval = $value[5]->diff($value[6]);
+                    $interval = date_diff($value[6], $value[5]);
                 }
 
                 echo "<tr>";
@@ -151,7 +151,7 @@ require "../DBConnection.php"
                 echo "<td>" . $value[3] . "</td>";
                 echo "<td>" . $value[4] . "</td>";
                 if ($interval != null) {
-                    echo "<td> not null </td>";
+                    echo "<td> " . $interval->days . " hari </td>";
                 } else {
                     echo "<td> Tidak ada informasi </td>";
                 }
