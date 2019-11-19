@@ -170,7 +170,8 @@ require "../DBConnection.php"
         <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
     </div>
 </body>
-<script type="text/javascript" src="../script/script.js">
+<script type="text/javascript" src="../script/script.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js">
     window.onload = function() {
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
