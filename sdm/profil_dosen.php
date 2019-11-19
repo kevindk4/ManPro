@@ -107,6 +107,8 @@
             </tr>
             <?php
             require_once '../DBConnection.php';
+            $jumlahSesuai = 0;
+            $jumlahTidak = 0;
             $conn = new DB();
             $hasil = $conn->executeStoredProcedure("EXEC Tabel3a1_DosenTetapUPPS", []);
             foreach ($hasil as $row){
@@ -116,6 +118,11 @@
                 echo "<td>".$row[2]."</td>";
                 echo "<td>".$row[3]."</td>";
                 echo "<td>".$row[4]."</td>";
+                if($row[5]=="V"){
+                    $jumlahSesuai++;
+                }else{
+                    $jumlahTidak++;
+                }
                 echo "<td>".$row[5]."</td>";
                 echo "<td>".$row[6]."</td>";
                 echo "<td>".$row[7]."</td>";
@@ -128,14 +135,37 @@
                 echo "<td>".$row[10]."</td>";
                 echo "<td>".$row[11]."</td>";
                 echo "</tr>";
+
+                $dataPoints = array(
+                    array("label" => "Sesuai", "y" => $jumlahSesuai),
+                    array("label" => "Tidak Sesuai", "y" => $jumlahTidak)
+                );
             }
             ?>
             </table>
     </div>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
     <div class="footer">
         <p>Copyright <i class="fa fa-copyright"> 2019 by Tim Besar II Manpro</i></p>
     </div>
 </body>
 <script type="text/javascript" src="../script/script.js"></script>
-
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+    window.onload = function() {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title: {
+                text: "Kesesuaian Kompetensi Dosen"
+            },
+            data: [{
+                type: "pie",
+                yValueFormatString: "#,##0\"\"",
+                indexLabel: "{label} ({y})",
+                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+            }]
+        });
+        chart.render();
+    }
+</script>
 </html>
