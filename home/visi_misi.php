@@ -69,8 +69,10 @@
 
                     <a href="#" class="w3-block w3-left-align" onclick="myAccFunc7()">Luaran dan Capaian Tridharma <i class="fa fa-caret-down"></i></a>
                     <div class='w3-hide w3-blue w3-card' id='demoAcc7'>
-                        <a href="../luaran-capaian/luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
-                        <a href="../luaran-capaian/luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
+                    <a href="luaran_penelitian&pkm_mahasiswa.php" class='w3-bar-item' style="color:white">Publikasi Ilmiah Mahasiswa</a><br>
+                        <a href="capaian_pembelajaran.php" class='w3-bar-item' style="color:white">Capaian Pembelajaran</a>
+                        <a href="prestasi_akademik_nonakademik.php" class='w3-bar-item' style="color:white">Prestasi Akademik dan Non-Akademik</a>
+                        <a href="luaran_penelitian_pkm_lainnya.php" class='w3-bar-item' style="color:white">Luaran Penelitian PKM Lainnya Mahasiswa</a>
                     </div>
 
                     <a href="../about/about.php">About US</a>
